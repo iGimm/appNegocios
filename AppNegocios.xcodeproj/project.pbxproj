@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */; };
 		EB400E841A0B0B91003F5C7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400E831A0B0B91003F5C7D /* main.m */; };
 		EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400E861A0B0B91003F5C7D /* AppDelegate.m */; };
 		EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB400E881A0B0B91003F5C7D /* AppNegocios.xcdatamodeld */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB0CBC531A0C10C70037F86A /* ProductosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductosTableViewController.h; sourceTree = "<group>"; };
+		EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosTableViewController.m; sourceTree = "<group>"; };
 		EB400E7E1A0B0B91003F5C7D /* AppNegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB400E821A0B0B91003F5C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB400E831A0B0B91003F5C7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -179,6 +182,8 @@
 				EB400EB41A0B12B1003F5C7D /* UsuariosTableViewController.m */,
 				EB400EB91A0B29EB003F5C7D /* CategoriesTableViewController.h */,
 				EB400EBA1A0B29EB003F5C7D /* CategoriesTableViewController.m */,
+				EB0CBC531A0C10C70037F86A /* ProductosTableViewController.h */,
+				EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */,
 			);
 			name = "Consultar Controllers";
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */,
 				EB400EAC1A0B0F4E003F5C7D /* Producto.m in Sources */,
 				EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */,
+				EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */,
 				EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */,
 				EB7DEE0E1A0BE1A6000EDF4E /* CreateProductViewController.m in Sources */,
 				EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */,

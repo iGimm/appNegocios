@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Usuario.h"
 #import <CoreData/CoreData.h>
 
 @interface AddCategoriesTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 @property (nonatomic, retain) NSMutableSet *categories;
+@property (nonatomic,retain ) Usuario *usuario;
 
 @end

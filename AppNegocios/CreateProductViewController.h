@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CreateProductViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *tfNombreProducto;
 
 @end

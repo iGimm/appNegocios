@@ -24,6 +24,8 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)cancelarButtonPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+
 }
 
 /*

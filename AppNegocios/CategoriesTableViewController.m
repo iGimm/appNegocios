@@ -8,7 +8,7 @@
 
 #import "CategoriesTableViewController.h"
 #import "AddCategoriesTableViewController.h"
-
+#import "ProductosTableViewController.h"
 
 @interface CategoriesTableViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
@@ -109,7 +109,7 @@
     Categoria *currentUsuario = [_fetchedResultsController objectAtIndexPath:indexPath];
     
     // Configure the cell
-    [cell.textLabel       setText:[currentUsuario nombreCategoria]];
+    [cell.textLabel setText:[currentUsuario nombreCategoria]];
     
     
 }
@@ -141,6 +141,7 @@
         case NSFetchedResultsChangeInsert:
             [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
             break;
+            
         case NSFetchedResultsChangeMove:
             [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
             break;
@@ -151,6 +152,23 @@
 }
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"showAddCategory"]) {
+        UINavigationController *dest = segue.destinationViewController;
+        AddCategoriesTableViewController *actvc = [[dest viewControllers] firstObject];
+        actvc.usuario = _usuario;
+        NSLog(@"Ca");
+        
+        
+    }else
+        if ([segue.identifier isEqualToString:@"showProductsFromCategory"]) {
+            ProductosTableViewController * ptvc = (ProductosTableViewController*)segue.destinationViewController;
+            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+            ptvc.usuario = _usuario;
+            ptvc.categoria = [_fetchedResultsController objectAtIndexPath:indexPath];
+        }
+}
 
 - (IBAction)unwindToCategoriesFromUser:(UIStoryboardSegue *)segue{
     

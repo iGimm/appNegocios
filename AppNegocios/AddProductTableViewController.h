@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface AddProductTableViewController : UITableViewController
+#import <CoreData/CoreData.h>
+@interface AddProductTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@property (nonatomic, retain) NSMutableSet *products;
 
 @end
