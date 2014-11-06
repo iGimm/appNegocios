@@ -1,41 +1,37 @@
 //
-//  UsuariosTableViewController.m
+//  AddCategoriesTableViewController.m
 //  AppNegocios
 //
 //  Created by Pedro Contreras Nava on 05/11/14.
 //  Copyright (c) 2014 Pedro Contreras Nava. All rights reserved.
 //
 
-#import "UsuariosTableViewController.h"
-#import "AppDelegate.h"
-#import "Usuario.h"
+#import "AddCategoriesTableViewController.h"
 #import "Categoria.h"
-#import "Producto.h"
-#import "CreateUserViewController.h"
-#import "CategoriesTableViewController.h"
+#import "AppDelegate.h"
+#import "CrearCategoriaViewController.h"
 
-@interface UsuariosTableViewController ()
+@interface AddCategoriesTableViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
 @property (nonatomic,strong)NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic,strong) Usuario *usuarioSeleccionado;
 @end
 
-@implementation UsuariosTableViewController
+@implementation AddCategoriesTableViewController
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize fetchedResultsController = _fetchedResultsController;
-@synthesize usuarioSeleccionado;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
-
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Usuario" inManagedObjectContext:_managedObjectContext];
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Categoria" inManagedObjectContext:_managedObjectContext];
     NSError *error =nil;
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
     [busqueda setEntity:entityDescription];
-    [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreUsuario" ascending:YES]]];
-
+    [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreCategoria" ascending:YES]]];
+    
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:busqueda managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
     [_fetchedResultsController setDelegate:self];
     if(![_fetchedResultsController performFetch:&error]){
@@ -45,9 +41,9 @@
         
         NSLog(@"%@",error.localizedDescription);
     }
-
-    [self setTitle:@"Usuarios"];
-
+    
+    [self setTitle:@"Categorias"];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -104,10 +100,10 @@
 
 - (void)configureCell:(UITableViewCell*)cell atIndexPath:(NSIndexPath*)indexPath {
     
-    Usuario *currentUsuario = [_fetchedResultsController objectAtIndexPath:indexPath];
+    Categoria *currentCategoria = [_fetchedResultsController objectAtIndexPath:indexPath];
     
     // Configure the cell
-    [cell.textLabel       setText:[currentUsuario nombreUsuario]];
+    [cell.textLabel       setText:[currentCategoria nombreCategoria]];
     
     
 }
@@ -148,48 +144,28 @@
     }
 }
 
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    Usuario *usrSeleccionado = [_fetchedResultsController objectAtIndexPath:indexPath];
-    self.usuarioSeleccionado =usrSeleccionado;
+- (IBAction)unwindToAddCategorie:(UIStoryboardSegue *)segue{
+    CrearCategoriaViewController *ccvc = segue.sourceViewController;
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Categoria" inManagedObjectContext:_managedObjectContext];
     
     
-}
-
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue
-                 sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"showAddUser"]) {
-    }else
-    if ([segue.identifier isEqualToString:@"showCategoriesFromUser"]) {
-        CategoriesTableViewController * cvtc = (CategoriesTableViewController*)segue.destinationViewController;
-        cvtc.usuario = self.usuarioSeleccionado;
-    }
-}
-
-
-- (IBAction)unwindToList:(UIStoryboardSegue *)segue{
-    
-    CreateUserViewController *cvc = segue.sourceViewController;
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Usuario" inManagedObjectContext:_managedObjectContext];
-    
-    
-    if([cvc.tfNombreUsuario.text isEqualToString:@""] || [cvc.tfEdadUsuario.text isEqualToString:@""]){
+    if([ccvc.tfNombreCategoria.text isEqualToString:@""]){
         
         [[[UIAlertView alloc] initWithTitle:@"Datos incompletos"
-                                    message:@"Llena todos los datos del usuario"
+                                    message:@"Llena todos los datos de la categoria"
                                    delegate:nil
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil] show];
         
     }
     else{
-        Usuario * newUsuario = [[Usuario alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:_managedObjectContext];
+        Categoria * newCategoria = [[Categoria alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:_managedObjectContext];
         
-        [newUsuario setNombreUsuario:cvc.tfNombreUsuario.text];
-        [newUsuario setEdadUsuario:cvc.tfEdadUsuario.text];
+        [newCategoria setNombreCategoria:ccvc.tfNombreCategoria.text];
     }
 
+    
 }
 
 

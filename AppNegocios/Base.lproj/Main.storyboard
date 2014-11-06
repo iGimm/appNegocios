@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="1585" y="802"/>
         </scene>
-        <!--Categories Table View Controller-->
+        <!--Title-->
         <scene sceneID="kbS-0K-H5L">
             <objects>
                 <tableViewController id="yH5-gA-ZVS" customClass="CategoriesTableViewController" sceneMemberID="viewController">
@@ -80,10 +80,111 @@
                             <outlet property="delegate" destination="yH5-gA-ZVS" id="BZr-nS-Tye"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Title" id="JGo-p7-Bny">
+                        <barButtonItem key="rightBarButtonItem" title="Add Category" id="VGl-jw-lwv">
+                            <connections>
+                                <segue destination="sBD-5P-x5y" kind="presentation" modalPresentationStyle="currentContext" id="GEA-7w-6os"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jdj-wV-TQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2398" y="802"/>
+            <point key="canvasLocation" x="2792" y="802"/>
+        </scene>
+        <!--Add Categories Table View Controller-->
+        <scene sceneID="2UE-42-07j">
+            <objects>
+                <tableViewController id="hX2-4g-1ON" customClass="AddCategoriesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QbO-kB-YFa">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="FhU-d1-TXE">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FhU-d1-TXE" id="tVe-js-QuZ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="hX2-4g-1ON" id="3fG-7Y-9oc"/>
+                            <outlet property="delegate" destination="hX2-4g-1ON" id="Sv4-Ae-f6V"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="WHR-x3-tqy">
+                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="4Y1-3p-JO5">
+                            <connections>
+                                <segue destination="70X-ZJ-8GM" kind="modal" modalPresentationStyle="currentContext" id="C70-Gr-TbO"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="IAA-cz-Xpl">
+                            <connections>
+                                <segue destination="c48-nm-fOY" kind="unwind" unwindAction="unwindToCategoriesFromUser:" id="2ai-hB-2To"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5a5-Lj-Q91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="c48-nm-fOY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3559" y="32"/>
+        </scene>
+        <!--Agregar Categoría-->
+        <scene sceneID="MKO-wB-PFp">
+            <objects>
+                <viewController id="70X-ZJ-8GM" customClass="CrearCategoriaViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mm6-Ih-NlB"/>
+                        <viewControllerLayoutGuide type="bottom" id="GHX-6k-M56"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nqh-xZ-fpy">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre Categoria" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cuT-C8-wvH">
+                                <rect key="frame" x="90" y="37" width="140" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxF-7W-qeR">
+                                <rect key="frame" x="266" y="269" width="38" height="30"/>
+                                <state key="normal" title="Crear">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Y7J-Ce-hSC" kind="unwind" unwindAction="unwindToAddCategorie:" id="F9p-2P-wDg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PH6-wJ-20b">
+                                <rect key="frame" x="16" y="269" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelarPressed:" destination="70X-ZJ-8GM" eventType="touchUpInside" id="lZi-Ix-RHR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Agregar Categoría" id="OB8-WM-nt7">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="pRe-4R-d2J">
+                            <connections>
+                                <segue destination="Y7J-Ce-hSC" kind="unwind" unwindAction="unwindToAddCategorie:" id="8Yt-T8-Kre"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tfNombreCategoria" destination="cuT-C8-wvH" id="VNE-S2-wYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9M-0V-9ds" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Y7J-Ce-hSC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4142" y="32"/>
         </scene>
         <!--Create User View Controller-->
         <scene sceneID="987-aZ-Ml4">
@@ -195,6 +296,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rh1-rD-gks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1585" y="32"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="op2-cM-UsM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sBD-5P-x5y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H9v-cp-bnP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hX2-4g-1ON" kind="relationship" relationship="rootViewController" id="cZG-cE-FIR"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="58H-NQ-lmn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2792" y="32"/>
         </scene>
     </scenes>
 </document>

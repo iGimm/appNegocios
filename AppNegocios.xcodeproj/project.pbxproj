@@ -20,6 +20,8 @@
 		EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EB41A0B12B1003F5C7D /* UsuariosTableViewController.m */; };
 		EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EB71A0B1959003F5C7D /* CreateUserViewController.m */; };
 		EB400EBB1A0B29EB003F5C7D /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EBA1A0B29EB003F5C7D /* CategoriesTableViewController.m */; };
+		EB400EBE1A0B3182003F5C7D /* AddCategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EBD1A0B3182003F5C7D /* AddCategoriesTableViewController.m */; };
+		EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EC01A0B34DD003F5C7D /* CrearCategoriaViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,10 @@
 		EB400EB71A0B1959003F5C7D /* CreateUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateUserViewController.m; sourceTree = "<group>"; };
 		EB400EB91A0B29EB003F5C7D /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewController.h; sourceTree = "<group>"; };
 		EB400EBA1A0B29EB003F5C7D /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewController.m; sourceTree = "<group>"; };
+		EB400EBC1A0B3182003F5C7D /* AddCategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddCategoriesTableViewController.h; sourceTree = "<group>"; };
+		EB400EBD1A0B3182003F5C7D /* AddCategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddCategoriesTableViewController.m; sourceTree = "<group>"; };
+		EB400EBF1A0B34DD003F5C7D /* CrearCategoriaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrearCategoriaViewController.h; sourceTree = "<group>"; };
+		EB400EC01A0B34DD003F5C7D /* CrearCategoriaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrearCategoriaViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 				EB400E851A0B0B91003F5C7D /* AppDelegate.h */,
 				EB400E861A0B0B91003F5C7D /* AppDelegate.m */,
 				EB400E8E1A0B0B91003F5C7D /* Main.storyboard */,
+				EB400EBF1A0B34DD003F5C7D /* CrearCategoriaViewController.h */,
+				EB400EC01A0B34DD003F5C7D /* CrearCategoriaViewController.m */,
+				EB400EBC1A0B3182003F5C7D /* AddCategoriesTableViewController.h */,
+				EB400EBD1A0B3182003F5C7D /* AddCategoriesTableViewController.m */,
 				EB400EB61A0B1959003F5C7D /* CreateUserViewController.h */,
 				EB400EB71A0B1959003F5C7D /* CreateUserViewController.m */,
 				EB400EB31A0B12B1003F5C7D /* UsuariosTableViewController.h */,
@@ -247,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */,
 				EB400EAC1A0B0F4E003F5C7D /* Producto.m in Sources */,
 				EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */,
 				EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */,
@@ -254,6 +265,7 @@
 				EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */,
 				EB400EAF1A0B0F4F003F5C7D /* Categoria.m in Sources */,
 				EB400E841A0B0B91003F5C7D /* main.m in Sources */,
+				EB400EBE1A0B3182003F5C7D /* AddCategoriesTableViewController.m in Sources */,
 				EB400EB21A0B0F4F003F5C7D /* Usuario.m in Sources */,
 				EB400EBB1A0B29EB003F5C7D /* CategoriesTableViewController.m in Sources */,
 			);
