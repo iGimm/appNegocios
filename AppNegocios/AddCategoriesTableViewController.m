@@ -19,9 +19,11 @@
 @implementation AddCategoriesTableViewController
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize categories = _categories;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _categories = [NSMutableSet new];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Categoria" inManagedObjectContext:_managedObjectContext];
@@ -104,6 +106,18 @@
     
     // Configure the cell
     [cell.textLabel       setText:[currentCategoria nombreCategoria]];
+    
+    
+}
+
+-(void)addCategory:(Categoria*)categoria{
+    [_categories addObject:categoria];
+    NSLog(@"%@",_categories);
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    Categoria *categoriaSeleccionada = [_fetchedResultsController objectAtIndexPath:indexPath];
+    [self addCategory:(Categoria*)categoriaSeleccionada];
     
     
 }

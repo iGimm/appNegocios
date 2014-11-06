@@ -10,5 +10,6 @@
 #import <CoreData/CoreData.h>
 
 @interface AddCategoriesTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@property (nonatomic, retain) NSMutableSet *categories;
 
 @end

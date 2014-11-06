@@ -151,19 +151,21 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Usuario *usrSeleccionado = [_fetchedResultsController objectAtIndexPath:indexPath];
-    self.usuarioSeleccionado =usrSeleccionado;
     
+
     
 }
 
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue
-                 sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+                  {
     if ([segue.identifier isEqualToString:@"showAddUser"]) {
+        
     }else
     if ([segue.identifier isEqualToString:@"showCategoriesFromUser"]) {
         CategoriesTableViewController * cvtc = (CategoriesTableViewController*)segue.destinationViewController;
-        cvtc.usuario = self.usuarioSeleccionado;
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        cvtc.usuario = [_fetchedResultsController objectAtIndexPath:indexPath];
     }
 }
 
