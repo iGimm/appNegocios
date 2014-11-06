@@ -87,7 +87,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         // Delete object from database
-        [context deleteObject:[self.fetchedResultsController.fetchedObjects  objectAtIndex:indexPath.row]];
+        [_usuario removeCategoriesObject:[self.fetchedResultsController.fetchedObjects  objectAtIndex:indexPath.row]];
         
         NSError *error = nil;
         if (![context save:&error]) {
