@@ -1,12 +1,16 @@
 //
 //  AppDelegate.m
-//  AppNegocios
+//  Tudu
 //
-//  Created by Pedro Contreras Nava on 05/11/14.
-//  Copyright (c) 2014 Pedro Contreras Nava. All rights reserved.
+//  Created by Alejandro Cárdenas on 10/7/14.
+//  Copyright (c) 2014 acib708. All rights reserved.
 //
 
 #import "AppDelegate.h"
+#import "Producto.h"
+#import "Categoria.h"
+#import "Usuario.h"
+
 
 @interface AppDelegate ()
 
@@ -17,17 +21,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+   /*Usuario *usuario = [NSEntityDescription insertNewObjectForEntityForName:@"Usuario" inManagedObjectContext:[self managedObjectContext]];
+    Categoria *categoria = [NSEntityDescription insertNewObjectForEntityForName:@"Categoria" inManagedObjectContext:[self managedObjectContext]];
+    Producto *producto = [NSEntityDescription insertNewObjectForEntityForName:@"Producto" inManagedObjectContext:[self managedObjectContext]];
+    
+    usuario.nombreUsuario = @"Pedro";
+    categoria.nombreCategoria = @"Bebés";
+    producto.nombreProducto = @"Mamila";
+    producto.fechaInicio = [NSDate date];
+    producto.fechaTermino = [NSDate date];
+    producto.porcentaje = @8.1;
+    producto.category = categoria;
+    [usuario addCategoriesObject:categoria];
+    
+    [self saveContext];*/
+    
+    
     return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    
+    [self saveContext];
+    
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -51,7 +75,7 @@
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (NSURL *)applicationDocumentsDirectory {
-    // The directory the application uses to store the Core Data store file. This code uses a directory named "ITESM.AppNegocios" in the application's documents directory.
+    // The directory the application uses to store the Core Data store file. This code uses a directory named "acib708.Tudu" in the application's documents directory.
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 

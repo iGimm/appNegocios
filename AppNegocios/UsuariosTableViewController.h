@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UsuariosTableViewController.h
 //  AppNegocios
 //
 //  Created by Pedro Contreras Nava on 05/11/14.
@@ -7,9 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface ViewController : UIViewController
-
+@interface UsuariosTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @end
-
