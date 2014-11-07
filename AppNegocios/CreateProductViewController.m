@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _labelNombreCategoria.text = _categoria.nombreCategoria;
     // Do any additional setup after loading the view.
 }
 

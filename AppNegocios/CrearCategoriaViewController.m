@@ -23,7 +23,7 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)cancelPressed:(id)sender {
+- (IBAction)cancelarPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }

@@ -158,7 +158,7 @@
                     <navigationItem key="navigationItem" title="Productos" id="bOO-wT-SCt">
                         <barButtonItem key="rightBarButtonItem" title="Add Item" id="HWm-fh-dCO">
                             <connections>
-                                <segue destination="tEp-CU-6C3" kind="presentation" id="HgF-7l-pGY"/>
+                                <segue destination="tEp-CU-6C3" kind="presentation" identifier="asignarProductoCategoria" modalPresentationStyle="currentContext" id="HgF-7l-pGY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -296,11 +296,24 @@
                                     <action selector="cancelarButtonPressed:" destination="lc5-Kf-dZe" eventType="touchUpInside" id="voD-HE-m60"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Categoria: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TbD-Qj-jS8">
+                                <rect key="frame" x="16" y="74" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="tfNombreCategoria" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw4-4p-uly">
+                                <rect key="frame" x="109" y="74" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="labelNombreCategoria" destination="xw4-4p-uly" id="rOC-MG-dM0"/>
                         <outlet property="tfNombreProducto" destination="oeb-nb-uoG" id="JhL-Yj-wlY"/>
                     </connections>
                 </viewController>

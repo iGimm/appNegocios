@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Categoria.h"
+#import "Producto.h"
 
 @interface CreateProductViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *tfNombreProducto;
+@property (weak, nonatomic) IBOutlet UILabel *labelNombreCategoria;
+@property (strong,nonatomic) Categoria* categoria;
 
 @end

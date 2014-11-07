@@ -24,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setTitle:@"Productos"];
+    [self setTitle:_categoria.nombreCategoria];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Producto" inManagedObjectContext:_managedObjectContext];
@@ -32,7 +32,7 @@
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY category.users== %@)", _usuario.nombreUsuario ];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY category.users.nombreUsuario== %@ AND category.nombreCategoria == %@)", _usuario.nombreUsuario,_categoria.nombreCategoria ];
     
     [busqueda setEntity:entityDescription];
     [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
@@ -135,8 +135,21 @@
 
 
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"asignarProductoCategoria"]) {
+        UINavigationController *dest = segue.destinationViewController;
+        AddProductTableViewController *aptvc = [[dest viewControllers] firstObject];
+        aptvc.categoria = _categoria;
+        
+        
+    }
+}
+
+
 - (IBAction)unwindToProductsFromCategory:(UIStoryboardSegue *)segue{
     AddProductTableViewController * aptvc = segue.sourceViewController;
+    //_categoria.products = aptvc.products;
     
 }
 

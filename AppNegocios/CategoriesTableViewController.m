@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self setTitle:@"Categoria"];
+    [self setTitle:_usuario.nombreUsuario];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Categoria" inManagedObjectContext:_managedObjectContext];
@@ -173,6 +173,10 @@
 - (IBAction)unwindToCategoriesFromUser:(UIStoryboardSegue *)segue{
     
     AddCategoriesTableViewController * actvc = segue.sourceViewController;
+    for (Categoria *cat in actvc.categories) {
+        [cat addUsersObject:_usuario];
+    }
+    
     [_usuario setCategories:actvc.categories];
 }
 

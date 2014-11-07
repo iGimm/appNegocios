@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "Categoria.h"
 @interface AddProductTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 @property (nonatomic, retain) NSMutableSet *products;
-
+@property (nonatomic,retain) Categoria *categoria;
 @end

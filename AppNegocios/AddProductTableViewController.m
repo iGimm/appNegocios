@@ -14,6 +14,7 @@
 @interface AddProductTableViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
 @property (nonatomic,strong)NSFetchedResultsController *fetchedResultsController;
+@property AppDelegate *delegate;
 @end
 
 @implementation AddProductTableViewController
@@ -22,7 +23,9 @@
 @synthesize products = _products;
 
 - (void)viewDidLoad {
+    _delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     [super viewDidLoad];
+    [self setTitle:[NSString stringWithFormat:@"Productos de %@",_categoria.nombreCategoria]];
     _products = [NSMutableSet new];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
@@ -31,7 +34,10 @@
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category.nombreCategoria == %@)", _categoria.nombreCategoria ];
+    
     [busqueda setEntity:entityDescription];
+    [busqueda setPredicate:predicate];
     [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:busqueda managedObjectContext:_managedObjectContext sectionNameKeyPath:nil cacheName:nil];
@@ -44,7 +50,6 @@
         NSLog(@"%@",error.localizedDescription);
     }
     
-    [self setTitle:@"Productos"];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -110,13 +115,13 @@
     
 }
 
--(void)addCategory:(Producto*)producto{
+-(void)addProductToSet:(Producto*)producto{
     [_products addObject:producto];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Producto *productoSeleccionado = [_fetchedResultsController objectAtIndexPath:indexPath];
-    [self addCategory:(Producto*)productoSeleccionado];
+    [self addProductToSet:(Producto*)productoSeleccionado];
     
     
 }
@@ -147,6 +152,7 @@
             break;
         case NSFetchedResultsChangeInsert:
             [self.tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationLeft];
+
             break;
         case NSFetchedResultsChangeMove:
             [self.tableView moveRowAtIndexPath:indexPath toIndexPath:newIndexPath];
@@ -154,6 +160,17 @@
         case NSFetchedResultsChangeUpdate:
             [self configureCell:[self.tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
             break;
+    }
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"createProductSegue"]) {
+        CreateProductViewController *cpvc = segue.destinationViewController;
+        cpvc.categoria = _categoria;
+        
+        
     }
 }
 
@@ -177,6 +194,7 @@
         Producto * newProducto = [[Producto alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:_managedObjectContext];
         
         [newProducto setNombreProducto:cpvc.tfNombreProducto.text];
+        [newProducto setCategory:_categoria];
     }
     
     
