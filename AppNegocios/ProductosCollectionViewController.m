@@ -1,46 +1,47 @@
 //
-//  CategoriasCollectionViewController.m
+//  ProductosCollectionViewController.m
 //  AppNegocios
 //
 //  Created by Pedro Contreras Nava on 07/11/14.
 //  Copyright (c) 2014 Pedro Contreras Nava. All rights reserved.
 //
 
-#import "CategoriasCollectionViewController.h"
-#import "AppDelegate.h"
-#import "UsuariosCollectionViewCell.h"
-#import "Categoria.h"
-#import "AddCategoriesTableViewController.h"
 #import "ProductosCollectionViewController.h"
-@interface CategoriasCollectionViewController ()
+#import "AppDelegate.h" 
+#import "AddProductTableViewController.h"
+#import "UsuariosCollectionViewCell.h"
+#import "Producto.h"
+
+@interface ProductosCollectionViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
 @property (nonatomic,strong)NSFetchedResultsController *fetchedResultsController;
 @property (nonatomic,strong)NSMutableArray * sectionChanges;
 @property (nonatomic,strong)NSMutableArray * itemChanges;
 @end
 
-@implementation CategoriasCollectionViewController
+@implementation ProductosCollectionViewController
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize fetchedResultsController = _fetchedResultsController;
+@synthesize usuario = _usuario;
+
 
 static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self setTitle:_usuario.nombreUsuario];
-    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(5.0f, 3.0f, 5.0f, 3.0f);
-
+    [self setTitle:_categoria.nombreCategoria];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
-    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Categoria" inManagedObjectContext:_managedObjectContext];
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Producto" inManagedObjectContext:_managedObjectContext];
     NSError *error =nil;
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", _usuario.nombreUsuario ];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY category.users.nombreUsuario== %@ AND category.nombreCategoria == %@)", _usuario.nombreUsuario,_categoria.nombreCategoria ];
     
     [busqueda setEntity:entityDescription];
-    [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreCategoria" ascending:YES]]];
+    [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
     [busqueda setPredicate:predicate];
     
     
@@ -55,19 +56,24 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     
-    [self setTitle:_usuario.nombreUsuario];
+    
 
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -85,7 +91,7 @@ static NSString * const reuseIdentifier = @"Cell";
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UsuariosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
-    Categoria *currentCategory = [_fetchedResultsController objectAtIndexPath:indexPath];
+    Producto *currentProducto = [_fetchedResultsController objectAtIndexPath:indexPath];
     
     // Configure the cell
     
@@ -93,7 +99,7 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.layer.borderWidth = 1.0f;
     cell.layer.borderColor = [[UIColor whiteColor] CGColor];
     cell.labelNombreSeccion.textColor = [UIColor whiteColor];
-    cell.labelNombreSeccion.text =  currentCategory.nombreCategoria;
+    cell.labelNombreSeccion.text =  currentProducto.nombreProducto;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
     
@@ -177,67 +183,23 @@ static NSString * const reuseIdentifier = @"Cell";
     }];
 }
 
-- (IBAction)unwindToCategoriesFromUser:(UIStoryboardSegue *)segue{
-    
-    AddCategoriesTableViewController * actvc = segue.sourceViewController;
-    for (Categoria *cat in actvc.categories) {
-        [cat addUsersObject:_usuario];
-    }
-    
-    [_usuario setCategories:actvc.categories];
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    
-    if ([segue.identifier isEqualToString:@"showAddCategory"]) {
+    if ([segue.identifier isEqualToString:@"asignarProductoCategoria"]) {
         UINavigationController *dest = segue.destinationViewController;
-        AddCategoriesTableViewController *actvc = [[dest viewControllers] firstObject];
-        actvc.usuario = _usuario;
-        NSLog(@"Ca");
-    }else
-        if ([segue.identifier isEqualToString:@"showProductsFromCategory"]) {
-            ProductosCollectionViewController * ptvc = (ProductosCollectionViewController*)segue.destinationViewController;
-            UICollectionViewCell *cell = (UICollectionViewCell *)sender;
-            NSIndexPath *indexPath = [self.collectionView indexPathForCell:cell];
-            ptvc.usuario = _usuario;
-            ptvc.categoria = [_fetchedResultsController objectAtIndexPath:indexPath];
-        }
+        AddProductTableViewController *aptvc = [[dest viewControllers] firstObject];
+        aptvc.categoria = _categoria;
+        
+        
+    }
 }
 
 
-
-
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
+- (IBAction)unwindToProductsFromCategory:(UIStoryboardSegue *)segue{
+    AddProductTableViewController * aptvc = segue.sourceViewController;
+    //_categoria.products = aptvc.products;
+    
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

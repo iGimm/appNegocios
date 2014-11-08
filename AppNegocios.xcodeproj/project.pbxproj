@@ -28,6 +28,7 @@
 		EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */; };
 		EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */; };
 		EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */; };
+		EBCA1F691A0D9B3200AFBE0B /* ProductosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F681A0D9B3200AFBE0B /* ProductosCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,8 @@
 		EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewCell.m; sourceTree = "<group>"; };
 		EBCA1F601A0D913500AFBE0B /* CategoriasCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasCollectionViewController.h; sourceTree = "<group>"; };
 		EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasCollectionViewController.m; sourceTree = "<group>"; };
+		EBCA1F671A0D9B3200AFBE0B /* ProductosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductosCollectionViewController.h; sourceTree = "<group>"; };
+		EBCA1F681A0D9B3200AFBE0B /* ProductosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +255,7 @@
 		EBCA1F5E1A0D8EB800AFBE0B /* Consultar Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EBCA1F661A0D9B1A00AFBE0B /* Consultar Productos */,
 				EBCA1F5F1A0D911D00AFBE0B /* Consultar Categorias */,
 				EBCA1F5D1A0D8E8100AFBE0B /* Consultar Usuarios */,
 			);
@@ -265,6 +269,15 @@
 				EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */,
 			);
 			name = "Consultar Categorias";
+			sourceTree = "<group>";
+		};
+		EBCA1F661A0D9B1A00AFBE0B /* Consultar Productos */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1F671A0D9B3200AFBE0B /* ProductosCollectionViewController.h */,
+				EBCA1F681A0D9B3200AFBE0B /* ProductosCollectionViewController.m */,
+			);
+			name = "Consultar Productos";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -373,6 +386,7 @@
 				EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */,
 				EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */,
 				EB7DEE0E1A0BE1A6000EDF4E /* CreateProductViewController.m in Sources */,
+				EBCA1F691A0D9B3200AFBE0B /* ProductosCollectionViewController.m in Sources */,
 				EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */,
 				EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */,
 				EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */,

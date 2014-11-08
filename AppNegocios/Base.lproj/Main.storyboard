@@ -94,6 +94,7 @@
                                 </view>
                                 <connections>
                                     <outlet property="labelNombreSeccion" destination="2W4-T7-Agk" id="5su-CU-UTp"/>
+                                    <segue destination="NdN-65-1u5" kind="show" identifier="showProductsFromCategory" id="d4o-q2-ibV"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -112,40 +113,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Qs-TP-iNx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2285" y="819"/>
-        </scene>
-        <!--Productos-->
-        <scene sceneID="DA8-bt-DDf">
-            <objects>
-                <tableViewController id="GbZ-WT-q3l" customClass="ProductosTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PDJ-Tm-5Hj">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="3Z6-xc-Vwk">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Z6-xc-Vwk" id="tzc-Zz-gY7">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GbZ-WT-q3l" id="Ei6-Mr-6hB"/>
-                            <outlet property="delegate" destination="GbZ-WT-q3l" id="JQZ-Ko-1lF"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Productos" id="bOO-wT-SCt">
-                        <barButtonItem key="rightBarButtonItem" title="Add Item" id="HWm-fh-dCO">
-                            <connections>
-                                <segue destination="tEp-CU-6C3" kind="presentation" identifier="asignarProductoCategoria" modalPresentationStyle="currentContext" id="HgF-7l-pGY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JdB-gh-Mhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4702" y="802"/>
+            <point key="canvasLocation" x="2792" y="802"/>
         </scene>
         <!--Agregar Categoría-->
         <scene sceneID="MKO-wB-PFp">
@@ -201,6 +169,58 @@
                 <exit id="Y7J-Ce-hSC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4141" y="32"/>
+        </scene>
+        <!--Title-->
+        <scene sceneID="Ljt-OB-Z2o">
+            <objects>
+                <collectionViewController id="NdN-65-1u5" customClass="ProductosCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="BK6-c9-dRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n84-ue-dsE">
+                            <size key="itemSize" width="150" height="145"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="dtc-Pr-faY" customClass="UsuariosCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="150" height="145"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLC-XM-cuJ">
+                                            <rect key="frame" x="58" y="116" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="labelNombreSeccion" destination="CLC-XM-cuJ" id="cMw-2e-qi4"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="NdN-65-1u5" id="z5r-GY-YBe"/>
+                            <outlet property="delegate" destination="NdN-65-1u5" id="GEv-91-nhP"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Title" id="XdH-Uo-6fq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3Ed-8I-F0R">
+                            <connections>
+                                <segue destination="tEp-CU-6C3" kind="presentation" identifier="asignarProductoCategoria" modalPresentationStyle="currentContext" id="DLC-WV-cbq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kKU-Bk-dad" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3518" y="802"/>
         </scene>
         <!--Agregar Producto-->
         <scene sceneID="G19-m9-mX1">
