@@ -25,6 +25,9 @@
 		EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EC01A0B34DD003F5C7D /* CrearCategoriaViewController.m */; };
 		EB7DEE0E1A0BE1A6000EDF4E /* CreateProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DEE0D1A0BE1A6000EDF4E /* CreateProductViewController.m */; };
 		EB7DEE141A0BE34B000EDF4E /* AddProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DEE131A0BE34B000EDF4E /* AddProductTableViewController.m */; };
+		EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */; };
+		EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */; };
+		EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,12 @@
 		EB7DEE0D1A0BE1A6000EDF4E /* CreateProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateProductViewController.m; sourceTree = "<group>"; };
 		EB7DEE121A0BE34B000EDF4E /* AddProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductTableViewController.h; sourceTree = "<group>"; };
 		EB7DEE131A0BE34B000EDF4E /* AddProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductTableViewController.m; sourceTree = "<group>"; };
+		EBCA1F551A0D7E3A00AFBE0B /* UsuariosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewController.h; sourceTree = "<group>"; };
+		EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewController.m; sourceTree = "<group>"; };
+		EBCA1F581A0D818D00AFBE0B /* UsuariosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewCell.h; sourceTree = "<group>"; };
+		EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewCell.m; sourceTree = "<group>"; };
+		EBCA1F601A0D913500AFBE0B /* CategoriasCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriasCollectionViewController.h; sourceTree = "<group>"; };
+		EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriasCollectionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,11 +214,57 @@
 		EB7DEE0B1A0BE15F000EDF4E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				EBCA1F5C1A0D8E2600AFBE0B /* Collection View Controllers */,
+				EBCA1F5B1A0D8E0B00AFBE0B /* Table View Controllers */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		EBCA1F5B1A0D8E0B00AFBE0B /* Table View Controllers */ = {
+			isa = PBXGroup;
+			children = (
 				EB7DEE071A0BE0F9000EDF4E /* Crear Controllers */,
 				EB7DEE081A0BE116000EDF4E /* Asignar Controllers */,
 				EB7DEE091A0BE128000EDF4E /* Consultar Controllers */,
 			);
-			name = Controllers;
+			name = "Table View Controllers";
+			sourceTree = "<group>";
+		};
+		EBCA1F5C1A0D8E2600AFBE0B /* Collection View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1F5E1A0D8EB800AFBE0B /* Consultar Controllers */,
+			);
+			name = "Collection View Controllers";
+			sourceTree = "<group>";
+		};
+		EBCA1F5D1A0D8E8100AFBE0B /* Consultar Usuarios */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1F551A0D7E3A00AFBE0B /* UsuariosCollectionViewController.h */,
+				EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */,
+				EBCA1F581A0D818D00AFBE0B /* UsuariosCollectionViewCell.h */,
+				EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */,
+			);
+			name = "Consultar Usuarios";
+			sourceTree = "<group>";
+		};
+		EBCA1F5E1A0D8EB800AFBE0B /* Consultar Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1F5F1A0D911D00AFBE0B /* Consultar Categorias */,
+				EBCA1F5D1A0D8E8100AFBE0B /* Consultar Usuarios */,
+			);
+			name = "Consultar Controllers";
+			sourceTree = "<group>";
+		};
+		EBCA1F5F1A0D911D00AFBE0B /* Consultar Categorias */ = {
+			isa = PBXGroup;
+			children = (
+				EBCA1F601A0D913500AFBE0B /* CategoriasCollectionViewController.h */,
+				EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */,
+			);
+			name = "Consultar Categorias";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,11 +375,14 @@
 				EB7DEE0E1A0BE1A6000EDF4E /* CreateProductViewController.m in Sources */,
 				EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */,
 				EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */,
+				EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */,
 				EB400EAF1A0B0F4F003F5C7D /* Categoria.m in Sources */,
 				EB400E841A0B0B91003F5C7D /* main.m in Sources */,
+				EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */,
 				EB400EBE1A0B3182003F5C7D /* AddCategoriesTableViewController.m in Sources */,
 				EB400EB21A0B0F4F003F5C7D /* Usuario.m in Sources */,
 				EB7DEE141A0BE34B000EDF4E /* AddProductTableViewController.m in Sources */,
+				EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */,
 				EB400EBB1A0B29EB003F5C7D /* CategoriesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
