@@ -220,7 +220,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kKU-Bk-dad" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3518" y="802"/>
+            <point key="canvasLocation" x="3559" y="808"/>
         </scene>
         <!--Agregar Producto-->
         <scene sceneID="G19-m9-mX1">
