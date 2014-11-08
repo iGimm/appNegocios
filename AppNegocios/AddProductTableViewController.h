@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "Categoria.h"
+#import "Usuario.h"
 @interface AddProductTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 @property (nonatomic, retain) NSMutableSet *products;
 @property (nonatomic,retain) Categoria *categoria;
+@property (nonatomic,retain) Usuario *usuario;
 @end

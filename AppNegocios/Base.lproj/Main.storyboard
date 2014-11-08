@@ -106,7 +106,7 @@
                     <navigationItem key="navigationItem" title="Title" id="Y2L-co-Phh">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zT6-Xo-b3u">
                             <connections>
-                                <segue destination="sBD-5P-x5y" kind="presentation" identifier="showAddCategory" id="Jxs-k2-E81"/>
+                                <segue destination="sBD-5P-x5y" kind="presentation" identifier="showAddCategory" modalPresentationStyle="currentContext" id="Jxs-k2-E81"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -477,7 +477,7 @@
                     <navigationItem key="navigationItem" title="Title" id="zTA-es-ZLG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bPk-a3-mjw">
                             <connections>
-                                <segue destination="OEI-rR-RXG" kind="presentation" id="cwo-19-Mi6"/>
+                                <segue destination="OEI-rR-RXG" kind="presentation" modalPresentationStyle="currentContext" id="cwo-19-Mi6"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

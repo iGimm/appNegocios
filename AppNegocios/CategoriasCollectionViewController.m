@@ -185,6 +185,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     [_usuario setCategories:actvc.categories];
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -194,6 +195,7 @@ static NSString * const reuseIdentifier = @"Cell";
         UINavigationController *dest = segue.destinationViewController;
         AddCategoriesTableViewController *actvc = [[dest viewControllers] firstObject];
         actvc.usuario = _usuario;
+        actvc.categories = [NSMutableSet setWithSet:_usuario.categories ];
         NSLog(@"Ca");
     }else
         if ([segue.identifier isEqualToString:@"showProductsFromCategory"]) {

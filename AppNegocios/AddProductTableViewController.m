@@ -10,7 +10,7 @@
 #import "Producto.h"
 #import "AppDelegate.h"
 #import "CreateProductViewController.h"
-
+#import "Usuario.h"
 @interface AddProductTableViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
 @property (nonatomic,strong)NSFetchedResultsController *fetchedResultsController;
@@ -26,7 +26,6 @@
     _delegate = (AppDelegate*)[[UIApplication sharedApplication] delegate];
     [super viewDidLoad];
     [self setTitle:[NSString stringWithFormat:@"Productos de %@",_categoria.nombreCategoria]];
-    _products = [NSMutableSet new];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Producto" inManagedObjectContext:_managedObjectContext];
@@ -112,19 +111,34 @@
     // Configure the cell
     [cell.textLabel       setText:[currentProducto nombreProducto]];
     
-    
+    if([_products containsObject:currentProducto] ){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else cell.accessoryType =UITableViewCellAccessoryNone;
+}
+
+
+
+
+
+-(void)removeProductFromSet:(Producto*)producto{
+    [producto removeUsersObject:_usuario];
+    [_products removeObject:producto];
 }
 
 -(void)addProductToSet:(Producto*)producto{
+    [producto addUsersObject:_usuario];
     [_products addObject:producto];
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Producto *productoSeleccionado = [_fetchedResultsController objectAtIndexPath:indexPath];
-    [self addProductToSet:(Producto*)productoSeleccionado];
-    
-    
+    if([_products containsObject:productoSeleccionado]){
+        [self removeProductFromSet:productoSeleccionado];
+    }else [self addProductToSet:(Producto*)productoSeleccionado];
 }
+
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     // Deque cell
@@ -176,10 +190,12 @@
 
 - (IBAction)unwindToProduct:(UIStoryboardSegue *)segue{
     
-    CreateProductViewController *cpvc = segue.sourceViewController;
+  CreateProductViewController *cpvc = segue.sourceViewController;
+    
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Producto" inManagedObjectContext:_managedObjectContext];
-    
+    Producto * newProducto = [[Producto alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:_managedObjectContext];
+
     
     if([cpvc.tfNombreProducto.text isEqualToString:@""]){
         
@@ -191,12 +207,13 @@
         
     }
     else{
-        Producto * newProducto = [[Producto alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:_managedObjectContext];
         
         [newProducto setNombreProducto:cpvc.tfNombreProducto.text];
         [newProducto setCategory:_categoria];
+        
     }
     
+    NSLog(@"UTOP");
     
 
 }

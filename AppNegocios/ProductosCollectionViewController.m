@@ -29,7 +29,8 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(5.0f, 3.0f, 5.0f, 3.0f);
     [self setTitle:_categoria.nombreCategoria];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
@@ -38,7 +39,7 @@ static NSString * const reuseIdentifier = @"Cell";
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY category.users.nombreUsuario== %@ AND category.nombreCategoria == %@)", _usuario.nombreUsuario,_categoria.nombreCategoria ];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario== %@ AND category.nombreCategoria == %@)", _usuario.nombreUsuario,_categoria.nombreCategoria ];
     
     [busqueda setEntity:entityDescription];
     [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
@@ -189,7 +190,8 @@ static NSString * const reuseIdentifier = @"Cell";
         UINavigationController *dest = segue.destinationViewController;
         AddProductTableViewController *aptvc = [[dest viewControllers] firstObject];
         aptvc.categoria = _categoria;
-        
+        aptvc.products = [NSMutableSet setWithSet: _usuario.products ];
+        aptvc.usuario = _usuario;
         
     }
 }
@@ -197,8 +199,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (IBAction)unwindToProductsFromCategory:(UIStoryboardSegue *)segue{
     AddProductTableViewController * aptvc = segue.sourceViewController;
-    //_categoria.products = aptvc.products;
     
+    for (Producto *prod in aptvc.products ) {
+        [prod addUsersObject:_usuario];
+        [_usuario addProductsObject:prod];
+    }
 }
 
 

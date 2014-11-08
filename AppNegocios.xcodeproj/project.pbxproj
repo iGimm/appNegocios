@@ -15,9 +15,6 @@
 		EB400E921A0B0B91003F5C7D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB400E911A0B0B91003F5C7D /* Images.xcassets */; };
 		EB400E951A0B0B91003F5C7D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB400E931A0B0B91003F5C7D /* LaunchScreen.xib */; };
 		EB400EA11A0B0B91003F5C7D /* AppNegociosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EA01A0B0B91003F5C7D /* AppNegociosTests.m */; };
-		EB400EAC1A0B0F4E003F5C7D /* Producto.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EAB1A0B0F4E003F5C7D /* Producto.m */; };
-		EB400EAF1A0B0F4F003F5C7D /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EAE1A0B0F4F003F5C7D /* Categoria.m */; };
-		EB400EB21A0B0F4F003F5C7D /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EB11A0B0F4F003F5C7D /* Usuario.m */; };
 		EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EB41A0B12B1003F5C7D /* UsuariosTableViewController.m */; };
 		EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EB71A0B1959003F5C7D /* CreateUserViewController.m */; };
 		EB400EBB1A0B29EB003F5C7D /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EBA1A0B29EB003F5C7D /* CategoriesTableViewController.m */; };
@@ -25,6 +22,9 @@
 		EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400EC01A0B34DD003F5C7D /* CrearCategoriaViewController.m */; };
 		EB7DEE0E1A0BE1A6000EDF4E /* CreateProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DEE0D1A0BE1A6000EDF4E /* CreateProductViewController.m */; };
 		EB7DEE141A0BE34B000EDF4E /* AddProductTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB7DEE131A0BE34B000EDF4E /* AddProductTableViewController.m */; };
+		EBB25C111A0DD88D003B62E1 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB25C101A0DD88D003B62E1 /* Usuario.m */; };
+		EBB25C141A0DD88D003B62E1 /* Producto.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB25C131A0DD88D003B62E1 /* Producto.m */; };
+		EBB25C171A0DD88D003B62E1 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = EBB25C161A0DD88D003B62E1 /* Categoria.m */; };
 		EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */; };
 		EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */; };
 		EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */; };
@@ -56,12 +56,6 @@
 		EB400E9A1A0B0B91003F5C7D /* AppNegociosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppNegociosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB400E9F1A0B0B91003F5C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB400EA01A0B0B91003F5C7D /* AppNegociosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppNegociosTests.m; sourceTree = "<group>"; };
-		EB400EAA1A0B0F4E003F5C7D /* Producto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Producto.h; sourceTree = "<group>"; };
-		EB400EAB1A0B0F4E003F5C7D /* Producto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Producto.m; sourceTree = "<group>"; };
-		EB400EAD1A0B0F4F003F5C7D /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
-		EB400EAE1A0B0F4F003F5C7D /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
-		EB400EB01A0B0F4F003F5C7D /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
-		EB400EB11A0B0F4F003F5C7D /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 		EB400EB31A0B12B1003F5C7D /* UsuariosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosTableViewController.h; sourceTree = "<group>"; };
 		EB400EB41A0B12B1003F5C7D /* UsuariosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosTableViewController.m; sourceTree = "<group>"; };
 		EB400EB61A0B1959003F5C7D /* CreateUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateUserViewController.h; sourceTree = "<group>"; };
@@ -76,6 +70,13 @@
 		EB7DEE0D1A0BE1A6000EDF4E /* CreateProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateProductViewController.m; sourceTree = "<group>"; };
 		EB7DEE121A0BE34B000EDF4E /* AddProductTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddProductTableViewController.h; sourceTree = "<group>"; };
 		EB7DEE131A0BE34B000EDF4E /* AddProductTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddProductTableViewController.m; sourceTree = "<group>"; };
+		EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AppNegocios 2.xcdatamodel"; sourceTree = "<group>"; };
+		EBB25C0F1A0DD88D003B62E1 /* Usuario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Usuario.h; sourceTree = "<group>"; };
+		EBB25C101A0DD88D003B62E1 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
+		EBB25C121A0DD88D003B62E1 /* Producto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Producto.h; sourceTree = "<group>"; };
+		EBB25C131A0DD88D003B62E1 /* Producto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Producto.m; sourceTree = "<group>"; };
+		EBB25C151A0DD88D003B62E1 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
+		EBB25C161A0DD88D003B62E1 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
 		EBCA1F551A0D7E3A00AFBE0B /* UsuariosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewController.h; sourceTree = "<group>"; };
 		EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewController.m; sourceTree = "<group>"; };
 		EBCA1F581A0D818D00AFBE0B /* UsuariosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewCell.h; sourceTree = "<group>"; };
@@ -204,12 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				EB400E881A0B0B91003F5C7D /* AppNegocios.xcdatamodeld */,
-				EB400EB01A0B0F4F003F5C7D /* Usuario.h */,
-				EB400EB11A0B0F4F003F5C7D /* Usuario.m */,
-				EB400EAD1A0B0F4F003F5C7D /* Categoria.h */,
-				EB400EAE1A0B0F4F003F5C7D /* Categoria.m */,
-				EB400EAA1A0B0F4E003F5C7D /* Producto.h */,
-				EB400EAB1A0B0F4E003F5C7D /* Producto.m */,
+				EBB25C151A0DD88D003B62E1 /* Categoria.h */,
+				EBB25C161A0DD88D003B62E1 /* Categoria.m */,
+				EBB25C121A0DD88D003B62E1 /* Producto.h */,
+				EBB25C131A0DD88D003B62E1 /* Producto.m */,
+				EBB25C0F1A0DD88D003B62E1 /* Usuario.h */,
+				EBB25C101A0DD88D003B62E1 /* Usuario.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -381,7 +382,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */,
-				EB400EAC1A0B0F4E003F5C7D /* Producto.m in Sources */,
 				EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */,
 				EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */,
 				EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */,
@@ -390,12 +390,13 @@
 				EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */,
 				EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */,
 				EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */,
-				EB400EAF1A0B0F4F003F5C7D /* Categoria.m in Sources */,
+				EBB25C141A0DD88D003B62E1 /* Producto.m in Sources */,
 				EB400E841A0B0B91003F5C7D /* main.m in Sources */,
 				EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */,
 				EB400EBE1A0B3182003F5C7D /* AddCategoriesTableViewController.m in Sources */,
-				EB400EB21A0B0F4F003F5C7D /* Usuario.m in Sources */,
+				EBB25C111A0DD88D003B62E1 /* Usuario.m in Sources */,
 				EB7DEE141A0BE34B000EDF4E /* AddProductTableViewController.m in Sources */,
+				EBB25C171A0DD88D003B62E1 /* Categoria.m in Sources */,
 				EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */,
 				EB400EBB1A0B29EB003F5C7D /* CategoriesTableViewController.m in Sources */,
 			);
@@ -607,9 +608,10 @@
 		EB400E881A0B0B91003F5C7D /* AppNegocios.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */,
 				EB400E891A0B0B91003F5C7D /* AppNegocios.xcdatamodel */,
 			);
-			currentVersion = EB400E891A0B0B91003F5C7D /* AppNegocios.xcdatamodel */;
+			currentVersion = EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */;
 			path = AppNegocios.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

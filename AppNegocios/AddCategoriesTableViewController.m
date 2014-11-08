@@ -23,7 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _categories = [NSMutableSet new];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
     NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Categoria" inManagedObjectContext:_managedObjectContext];
@@ -107,18 +106,32 @@
     // Configure the cell
     [cell.textLabel       setText:[currentCategoria nombreCategoria]];
     
+    if([_categories containsObject:currentCategoria] ){
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    }else cell.accessoryType =UITableViewCellAccessoryNone;
     
+    
+}
+
+-(void)removeCategory:(Categoria*)categoria{
+    [categoria removeUsersObject:_usuario];
+    [_categories removeObject:categoria];
+    NSLog(@"Removing %@",categoria.nombreCategoria);
+
 }
 
 -(void)addCategory:(Categoria*)categoria{
     [categoria addUsersObject:_usuario];
     [_categories addObject:categoria];
-    NSLog(@"%@",_categories);
+    NSLog(@"Adding %@",categoria.nombreCategoria);
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Categoria *categoriaSeleccionada = [_fetchedResultsController objectAtIndexPath:indexPath];
-    [self addCategory:(Categoria*)categoriaSeleccionada];
+    if([_categories containsObject:categoriaSeleccionada]){
+        [self removeCategory:(Categoria*)categoriaSeleccionada];
+        
+    }else [self addCategory:(Categoria*)categoriaSeleccionada];
     
     
 }
