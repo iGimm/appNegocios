@@ -4,25 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Productos-->
-        <scene sceneID="w2c-86-fhU">
-            <objects>
-                <viewController id="kgN-Yb-RoZ" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Vhs-cs-ERz"/>
-                        <viewControllerLayoutGuide type="bottom" id="k1c-Md-l9h"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oja-X7-3Yv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Productos" id="bnG-0A-f3x"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LKM-tY-lzh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="906" y="32"/>
-        </scene>
         <!--Add Categories Table View Controller-->
         <scene sceneID="2UE-42-07j">
             <objects>
@@ -388,8 +369,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="kgN-Yb-RoZ" kind="relationship" relationship="viewControllers" id="0mg-lf-wWg"/>
                         <segue destination="Eq2-uU-U8R" kind="relationship" relationship="viewControllers" id="kQk-Wl-GAx"/>
+                        <segue destination="6f4-u5-rdY" kind="relationship" relationship="viewControllers" id="lyl-mS-kVd"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="anO-8e-f5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -414,6 +395,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdr-su-5ep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="898" y="802"/>
+        </scene>
+        <!--Consultar Lista Usuario Collection View Controller-->
+        <scene sceneID="7ZH-MI-lv7">
+            <objects>
+                <collectionViewController id="3Jh-gZ-VA5" customClass="ConsultarListaUsuarioCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ZCn-9K-s36">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qcF-FJ-8te">
+                            <size key="itemSize" width="100" height="100"/>
+                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="footerReferenceSize" width="50" height="50"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="pge-31-9vZ" customClass="UsuariosCollectionViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6r0-yM-Ubx">
+                                            <rect key="frame" x="8" y="71" width="84" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="labelNombreSeccion" destination="6r0-yM-Ubx" id="3yC-6p-WJL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="headerView" id="NmC-at-4na" customClass="HeaderViewCollectionReusableView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xe5-dl-K83">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uEJ-b2-Xtb">
+                                    <rect key="frame" x="8" y="14" width="1500" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <connections>
+                                <outlet property="imageView" destination="xe5-dl-K83" id="a48-cZ-r0C"/>
+                                <outlet property="sectionTitle" destination="uEJ-b2-Xtb" id="dY6-oi-g0F"/>
+                            </connections>
+                        </collectionReusableView>
+                        <collectionReusableView key="sectionFooterView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FooterView" id="BKT-zs-lP7">
+                            <rect key="frame" x="0.0" y="195" width="600" height="50"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Green-Woven-Straw-Texture-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="e96-xk-Ge7">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="310"/>
+                                </imageView>
+                            </subviews>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="3Jh-gZ-VA5" id="0Ft-Ha-ZGM"/>
+                            <outlet property="delegate" destination="3Jh-gZ-VA5" id="OLe-aY-dfI"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="6ow-e3-Jxm"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vMt-cc-WcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="-666"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ENT-NC-les">
@@ -522,5 +577,27 @@
             </objects>
             <point key="canvasLocation" x="4702" y="32"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="EjO-es-UCH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6f4-u5-rdY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="tDB-8l-Dpa"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PF1-3L-F1N">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3Jh-gZ-VA5" kind="relationship" relationship="rootViewController" id="57r-90-sfV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AlC-wu-BQq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="854" y="-666"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="Green-Woven-Straw-Texture-1.jpg" width="600" height="400"/>
+    </resources>
 </document>
