@@ -39,6 +39,7 @@
 		EB8F1BF41A14727B008DACB7 /* imagenesProductos in Resources */ = {isa = PBXBuildFile; fileRef = EB8F1BF31A14727B008DACB7 /* imagenesProductos */; };
 		EB8F1BF71A147285008DACB7 /* Imagenes-RELOJ-png-0.png in Resources */ = {isa = PBXBuildFile; fileRef = EB8F1BF51A147285008DACB7 /* Imagenes-RELOJ-png-0.png */; };
 		EB8F1BF81A147285008DACB7 /* Unknown.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EB8F1BF61A147285008DACB7 /* Unknown.jpeg */; };
+		EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */; };
 		EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */; };
 		EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */; };
 		EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */; };
@@ -110,6 +111,7 @@
 		EB8F1BF51A147285008DACB7 /* Imagenes-RELOJ-png-0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Imagenes-RELOJ-png-0.png"; path = "imagenesProductos/Imagenes-RELOJ-png-0.png"; sourceTree = "<group>"; };
 		EB8F1BF61A147285008DACB7 /* Unknown.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = Unknown.jpeg; path = imagenesProductos/Unknown.jpeg; sourceTree = "<group>"; };
 		EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AppNegocios 2.xcdatamodel"; sourceTree = "<group>"; };
+		EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stuff_DOS-01.png"; sourceTree = "<group>"; };
 		EBCA1F551A0D7E3A00AFBE0B /* UsuariosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewController.h; sourceTree = "<group>"; };
 		EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewController.m; sourceTree = "<group>"; };
 		EBCA1F581A0D818D00AFBE0B /* UsuariosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewCell.h; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		EB8F1BE21A1468F5008DACB7 /* imagenesUsuarios */ = {
 			isa = PBXGroup;
 			children = (
+				EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */,
 				EB8F1BF51A147285008DACB7 /* Imagenes-RELOJ-png-0.png */,
 				EB8F1BF61A147285008DACB7 /* Unknown.jpeg */,
 				EB8F1BEF1A1471FB008DACB7 /* conejo.png */,
@@ -456,6 +459,7 @@
 				EB8F1BE41A146E37008DACB7 /* imagenesSecciones in Resources */,
 				EB8F1BF21A1471FB008DACB7 /* zorro.jpeg in Resources */,
 				EB8F1BD01A144ED6008DACB7 /* Green-Woven-Straw-Texture-1.jpg in Resources */,
+				EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */,
 				EB8F1BF81A147285008DACB7 /* Unknown.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

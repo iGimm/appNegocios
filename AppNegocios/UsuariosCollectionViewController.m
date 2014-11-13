@@ -35,7 +35,9 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(5.0f, 3.0f, 5.0f, 3.0f);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 0, 15);
+    
+    //UIEdgeInsetsMake(<#CGFloat top#>, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
@@ -240,6 +242,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return CGSizeMake(135, 135);
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
