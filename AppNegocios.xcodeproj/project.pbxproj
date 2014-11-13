@@ -38,6 +38,7 @@
 		EBCA1F691A0D9B3200AFBE0B /* ProductosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F681A0D9B3200AFBE0B /* ProductosCollectionViewController.m */; };
 		EBD1089E1A1289A800B37F0F /* ConsultarListaUsuarioCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD1089D1A1289A800B37F0F /* ConsultarListaUsuarioCollectionViewController.m */; };
 		EBD108A31A128FEC00B37F0F /* HeaderViewCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EBD108A21A128FEC00B37F0F /* HeaderViewCollectionReusableView.m */; };
+		EBD3CE401A1550A2006E9849 /* casita_fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = EBD3CE3F1A1550A2006E9849 /* casita_fondo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		EBD1089D1A1289A800B37F0F /* ConsultarListaUsuarioCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultarListaUsuarioCollectionViewController.m; sourceTree = "<group>"; };
 		EBD108A11A128FEC00B37F0F /* HeaderViewCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderViewCollectionReusableView.h; sourceTree = "<group>"; };
 		EBD108A21A128FEC00B37F0F /* HeaderViewCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderViewCollectionReusableView.m; sourceTree = "<group>"; };
+		EBD3CE3F1A1550A2006E9849 /* casita_fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = casita_fondo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 		EB8F1BE21A1468F5008DACB7 /* imagenesUsuarios */ = {
 			isa = PBXGroup;
 			children = (
+				EBD3CE3F1A1550A2006E9849 /* casita_fondo.png */,
 				EBC7DD501A15484400150A23 /* pato.jpg */,
 				EBC7DD4C1A1543FC00150A23 /* florecitas.png */,
 				EBC7DD4A1A15438F00150A23 /* cuadro.png */,
@@ -427,6 +430,7 @@
 				EBC7DD511A15484400150A23 /* pato.jpg in Resources */,
 				EB400E951A0B0B91003F5C7D /* LaunchScreen.xib in Resources */,
 				EB400E921A0B0B91003F5C7D /* Images.xcassets in Resources */,
+				EBD3CE401A1550A2006E9849 /* casita_fondo.png in Resources */,
 				EBC7DD4F1A15481B00150A23 /* imagenesSecciones in Resources */,
 				EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */,
 			);
