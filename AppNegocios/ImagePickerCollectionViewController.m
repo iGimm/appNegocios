@@ -11,7 +11,7 @@
 #import "CreateUserViewController.h"
 
 @interface ImagePickerCollectionViewController ()
-@property NSArray * imagesArray;
+
 @end
 
 @implementation ImagePickerCollectionViewController
@@ -21,8 +21,8 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.collectionView.backgroundColor = [UIColor whiteColor];
-    _imagesArray = @[@"header_banner.png",@"header_banner.png",@"header_bannr.png",@"header_banner.png"];
-    
+
+
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -61,7 +61,7 @@ static NSString * const reuseIdentifier = @"Cell";
     ImageCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
     
-    
+    NSLog(@"%ld",indexPath.row);
     // Configure the cell
     UIImage *imagen = [UIImage imageNamed:[_imagesArray objectAtIndex:indexPath.row]];
     

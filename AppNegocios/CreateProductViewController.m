@@ -32,12 +32,21 @@
 
 }
 
+// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"imagePickerSegue"]) {
         self.ipcvc = segue.destinationViewController;
         self.ipcvc.nombreImagen = _nombreImagen;
         
+        
+        NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
+        NSString * documentsPath = [resourcePath stringByAppendingPathComponent:@"imagenesProductos"];
+        NSError *error;
+        NSArray * directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsPath error:&error];
+        self.ipcvc.imagesArray = directoryContents;
+        
+        NSLog(@"%@",directoryContents);
         
     }
 }

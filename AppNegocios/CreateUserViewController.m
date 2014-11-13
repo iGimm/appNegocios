@@ -43,6 +43,14 @@
         self.ipcvc.nombreImagen = _nombreImagen;
         
         
+        NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
+        NSString * documentsPath = [resourcePath stringByAppendingPathComponent:@"imagenesSecciones"];
+        NSError *error;
+        NSArray * directoryContents = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:documentsPath error:&error];
+        self.ipcvc.imagesArray = directoryContents;
+        
+        NSLog(@"%@",directoryContents);
+        
     }
 }
 

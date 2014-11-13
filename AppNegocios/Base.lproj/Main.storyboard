@@ -138,7 +138,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bVe-1u-RaU">
                                 <rect key="frame" x="0.0" y="128" width="320" height="128"/>
                                 <connections>
-                                    <segue destination="JIJ-hd-o3k" kind="embed" id="oLG-8x-m9r"/>
+                                    <segue destination="JIJ-hd-o3k" kind="embed" identifier="imagePickerSegue" id="oLG-8x-m9r"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -306,7 +306,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bJO-eM-2g3">
                                 <rect key="frame" x="0.0" y="192" width="320" height="128"/>
                                 <connections>
-                                    <segue destination="apV-Wg-0yK" kind="embed" id="d83-Hb-fzQ"/>
+                                    <segue destination="apV-Wg-0yK" kind="embed" identifier="imagePickerSegue" id="d83-Hb-fzQ"/>
                                 </connections>
                             </containerView>
                         </subviews>

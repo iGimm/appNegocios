@@ -10,5 +10,7 @@
 
 @interface ImagePickerCollectionViewController : UICollectionViewController
 @property NSString *nombreImagen;
+@property NSArray * imagesArray;
+
 
 @end
