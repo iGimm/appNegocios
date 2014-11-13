@@ -103,7 +103,8 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.labelNombreSeccion.text =  currentProducto.nombreProducto;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
-    
+    cell.imageView.image = [UIImage imageNamed:currentProducto.nombreImagen];
+
     return cell;
 }
 

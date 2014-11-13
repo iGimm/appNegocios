@@ -2,7 +2,7 @@
 //  Usuario.h
 //  AppNegocios
 //
-//  Created by Pedro Contreras Nava on 07/11/14.
+//  Created by Pedro Contreras Nava on 12/11/14.
 //  Copyright (c) 2014 Pedro Contreras Nava. All rights reserved.
 //
 
@@ -15,6 +15,7 @@
 
 @property (nonatomic, retain) NSString * edadUsuario;
 @property (nonatomic, retain) NSString * nombreUsuario;
+@property (nonatomic, retain) NSString * nombreImagen;
 @property (nonatomic, retain) NSSet *categories;
 @property (nonatomic, retain) NSSet *products;
 @end

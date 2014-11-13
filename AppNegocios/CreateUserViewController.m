@@ -7,13 +7,14 @@
 //
 
 #import "CreateUserViewController.h"
+#import "ImagePickerCollectionViewController.h"
 
 @interface CreateUserViewController ()
-
+@property   ImagePickerCollectionViewController *ipcvc;
 @end
 
 @implementation CreateUserViewController
-
+@synthesize nombreImagen = _nombreImagen;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -31,14 +32,18 @@
     [self performSegueWithIdentifier:@"unwindToList" sender:self];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"imagePickerSegue"]) {
+        self.ipcvc = segue.destinationViewController;
+        self.ipcvc.nombreImagen = _nombreImagen;
+        
+        
+    }
 }
-*/
 
 @end

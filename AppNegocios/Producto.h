@@ -2,7 +2,7 @@
 //  Producto.h
 //  AppNegocios
 //
-//  Created by Pedro Contreras Nava on 07/11/14.
+//  Created by Pedro Contreras Nava on 12/11/14.
 //  Copyright (c) 2014 Pedro Contreras Nava. All rights reserved.
 //
 
@@ -17,6 +17,7 @@
 @property (nonatomic, retain) NSDate * fechaTermino;
 @property (nonatomic, retain) NSString * nombreProducto;
 @property (nonatomic, retain) NSNumber * porcentaje;
+@property (nonatomic, retain) NSString * nombreImagen;
 @property (nonatomic, retain) Categoria *category;
 @property (nonatomic, retain) NSSet *users;
 @end

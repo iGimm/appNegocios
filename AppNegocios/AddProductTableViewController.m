@@ -210,6 +210,7 @@
         
         [newProducto setNombreProducto:cpvc.tfNombreProducto.text];
         [newProducto setCategory:_categoria];
+        [newProducto setNombreImagen:cpvc.nombreImagen];
         
     }
     

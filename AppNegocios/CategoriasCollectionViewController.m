@@ -96,6 +96,8 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.labelNombreSeccion.text =  currentCategory.nombreCategoria;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
+    cell.imageView.image = [UIImage imageNamed:currentCategory.nombreImagen];
+
     
     return cell;
 }
@@ -185,6 +187,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     [_usuario setCategories:actvc.categories];
+    
     
 }
 

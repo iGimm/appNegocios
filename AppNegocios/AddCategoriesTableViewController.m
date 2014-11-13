@@ -191,6 +191,8 @@
         Categoria * newCategoria = [[Categoria alloc] initWithEntity:entityDescription insertIntoManagedObjectContext:_managedObjectContext];
         
         [newCategoria setNombreCategoria:ccvc.tfNombreCategoria.text];
+        [newCategoria setNombreImagen:ccvc.nombreImagen];
+        
     }
 
     

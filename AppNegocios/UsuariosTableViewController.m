@@ -190,6 +190,8 @@
         
         [newUsuario setNombreUsuario:cvc.tfNombreUsuario.text];
         [newUsuario setEdadUsuario:cvc.tfEdadUsuario.text];
+        [newUsuario setNombreImagen:cvc.nombreImagen];
+        
     }
 
 }

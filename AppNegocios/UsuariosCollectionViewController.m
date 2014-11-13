@@ -118,6 +118,7 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.labelNombreSeccion.text =  currentUsuario.nombreUsuario;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
+    cell.imageView.image = [UIImage imageNamed:currentUsuario.nombreImagen];
     
     return cell;
 }
@@ -219,6 +220,8 @@ static NSString * const reuseIdentifier = @"Cell";
         
         [newUsuario setNombreUsuario:cvc.tfNombreUsuario.text];
         [newUsuario setEdadUsuario:cvc.tfEdadUsuario.text];
+        [newUsuario setNombreImagen:cvc.nombreImagen];
+        
     }
     
 }

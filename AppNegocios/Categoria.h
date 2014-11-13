@@ -2,7 +2,7 @@
 //  Categoria.h
 //  AppNegocios
 //
-//  Created by Pedro Contreras Nava on 07/11/14.
+//  Created by Pedro Contreras Nava on 12/11/14.
 //  Copyright (c) 2014 Pedro Contreras Nava. All rights reserved.
 //
 
@@ -14,6 +14,7 @@
 @interface Categoria : NSManagedObject
 
 @property (nonatomic, retain) NSString * nombreCategoria;
+@property (nonatomic, retain) NSString * nombreImagen;
 @property (nonatomic, retain) NSSet *products;
 @property (nonatomic, retain) NSSet *users;
 @end
