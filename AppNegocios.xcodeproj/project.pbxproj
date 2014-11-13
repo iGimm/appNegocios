@@ -30,6 +30,8 @@
 		EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */; };
 		EBC7DD4B1A15438F00150A23 /* cuadro.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD4A1A15438F00150A23 /* cuadro.png */; };
 		EBC7DD4D1A1543FC00150A23 /* florecitas.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD4C1A1543FC00150A23 /* florecitas.png */; };
+		EBC7DD4F1A15481B00150A23 /* imagenesSecciones in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD4E1A15481B00150A23 /* imagenesSecciones */; };
+		EBC7DD511A15484400150A23 /* pato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD501A15484400150A23 /* pato.jpg */; };
 		EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */; };
 		EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */; };
 		EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */; };
@@ -92,6 +94,8 @@
 		EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stuff_DOS-01.png"; sourceTree = "<group>"; };
 		EBC7DD4A1A15438F00150A23 /* cuadro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cuadro.png; sourceTree = "<group>"; };
 		EBC7DD4C1A1543FC00150A23 /* florecitas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = florecitas.png; sourceTree = "<group>"; };
+		EBC7DD4E1A15481B00150A23 /* imagenesSecciones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenesSecciones; sourceTree = "<group>"; };
+		EBC7DD501A15484400150A23 /* pato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pato.jpg; path = imagenesSecciones/pato.jpg; sourceTree = "<group>"; };
 		EBCA1F551A0D7E3A00AFBE0B /* UsuariosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewController.h; sourceTree = "<group>"; };
 		EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewController.m; sourceTree = "<group>"; };
 		EBCA1F581A0D818D00AFBE0B /* UsuariosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewCell.h; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 		EB400E801A0B0B91003F5C7D /* AppNegocios */ = {
 			isa = PBXGroup;
 			children = (
+				EBC7DD4E1A15481B00150A23 /* imagenesSecciones */,
 				EB8F1BE21A1468F5008DACB7 /* imagenesUsuarios */,
 				EB400E851A0B0B91003F5C7D /* AppDelegate.h */,
 				EB400E861A0B0B91003F5C7D /* AppDelegate.m */,
@@ -259,6 +264,7 @@
 		EB8F1BE21A1468F5008DACB7 /* imagenesUsuarios */ = {
 			isa = PBXGroup;
 			children = (
+				EBC7DD501A15484400150A23 /* pato.jpg */,
 				EBC7DD4C1A1543FC00150A23 /* florecitas.png */,
 				EBC7DD4A1A15438F00150A23 /* cuadro.png */,
 				EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */,
@@ -418,8 +424,10 @@
 				EBC7DD4D1A1543FC00150A23 /* florecitas.png in Resources */,
 				EB400E901A0B0B91003F5C7D /* Main.storyboard in Resources */,
 				EBC7DD4B1A15438F00150A23 /* cuadro.png in Resources */,
+				EBC7DD511A15484400150A23 /* pato.jpg in Resources */,
 				EB400E951A0B0B91003F5C7D /* LaunchScreen.xib in Resources */,
 				EB400E921A0B0B91003F5C7D /* Images.xcassets in Resources */,
+				EBC7DD4F1A15481B00150A23 /* imagenesSecciones in Resources */,
 				EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
