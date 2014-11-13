@@ -445,6 +445,46 @@
             </objects>
             <point key="canvasLocation" x="86" y="521"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="0SV-Js-Qpz">
+            <objects>
+                <viewController id="H8D-TW-Txo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pba-P5-Rcv"/>
+                        <viewControllerLayoutGuide type="bottom" id="tFA-63-GcG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6aB-95-Zdl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" background="cuadro.png" disabledBackground="cuadro.png" translatesAutoresizingMaskIntoConstraints="NO" id="gPR-hx-45P">
+                                <rect key="frame" x="36" y="38" width="249" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" background="cuadro.png" disabledBackground="cuadro.png" translatesAutoresizingMaskIntoConstraints="NO" id="UrI-gz-QM6">
+                                <rect key="frame" x="36" y="89" width="249" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHB-6Q-sxi">
+                                <rect key="frame" x="145" y="135" width="30" height="30"/>
+                                <state key="normal" title="Go">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="florecitas.png" translatesAutoresizingMaskIntoConstraints="NO" id="l7i-hC-a5f">
+                                <rect key="frame" x="86" y="350" width="250" height="290"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6i9-DM-PTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-610" y="513"/>
+        </scene>
         <!--Users-->
         <scene sceneID="Nlf-xI-aX2">
             <objects>
@@ -558,7 +598,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rh1-rD-gks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585" y="32"/>
+            <point key="canvasLocation" x="2159" y="100"/>
         </scene>
         <!--Title-->
         <scene sceneID="y7L-5O-Czc">
@@ -616,7 +656,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nsG-Cr-GgK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1618" y="802"/>
+            <point key="canvasLocation" x="1738" y="794"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="op2-cM-UsM">
@@ -760,6 +800,8 @@
     </scenes>
     <resources>
         <image name="Green-Woven-Straw-Texture-1.jpg" width="600" height="400"/>
+        <image name="cuadro.png" width="1008" height="200"/>
+        <image name="florecitas.png" width="1021" height="1179"/>
         <image name="header_banner.png" width="640" height="98"/>
     </resources>
 </document>
