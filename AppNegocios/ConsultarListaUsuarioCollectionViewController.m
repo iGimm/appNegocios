@@ -98,7 +98,7 @@ static NSString * const reuseIdentifier = @"Cell";
         headerView.sectionTitle.textColor = [UIColor whiteColor ];
         headerView.sectionTitle.textAlignment = NSTextAlignmentLeft;
         headerView.sectionTitle.adjustsFontSizeToFitWidth = YES;
-        UIImage *headerImage = [UIImage imageNamed:@"header_banner.png"];
+        UIImage *headerImage = [UIImage imageNamed:@"header_cocina.png"];
         headerView.imageView.image = headerImage;
         
         reusableview = headerView;

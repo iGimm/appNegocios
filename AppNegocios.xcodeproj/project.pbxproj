@@ -7,6 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EB029D3E1A1CF7D300370462 /* imagenesProductos in Resources */ = {isa = PBXBuildFile; fileRef = EB029D3B1A1CF7D300370462 /* imagenesProductos */; };
+		EB029D3F1A1CF7D300370462 /* imagenesSecciones in Resources */ = {isa = PBXBuildFile; fileRef = EB029D3C1A1CF7D300370462 /* imagenesSecciones */; };
+		EB029D741A1CF81400370462 /* Categoría_Baño-02.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D411A1CF81400370462 /* Categoría_Baño-02.png */; };
+		EB029D751A1CF81400370462 /* Categoría_Higiene personal-02.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D421A1CF81400370462 /* Categoría_Higiene personal-02.png */; };
+		EB029D761A1CF81400370462 /* aromatizante-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D451A1CF81400370462 /* aromatizante-01.jpg */; };
+		EB029D771A1CF81400370462 /* limpiador-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D461A1CF81400370462 /* limpiador-01.jpg */; };
+		EB029D781A1CF81400370462 /* pañuelos-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D471A1CF81400370462 /* pañuelos-01.jpg */; };
+		EB029D791A1CF81400370462 /* aceite-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D491A1CF81400370462 /* aceite-01.jpg */; };
+		EB029D7A1A1CF81400370462 /* aderezos-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D4A1A1CF81400370462 /* aderezos-01.jpg */; };
+		EB029D7B1A1CF81400370462 /* agua-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D4B1A1CF81400370462 /* agua-01.jpg */; };
+		EB029D7C1A1CF81400370462 /* Aguacate.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D4C1A1CF81400370462 /* Aguacate.png */; };
+		EB029D7D1A1CF81400370462 /* Ajo.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D4D1A1CF81400370462 /* Ajo.png */; };
+		EB029D7E1A1CF81400370462 /* Apio.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D4E1A1CF81400370462 /* Apio.png */; };
+		EB029D7F1A1CF81400370462 /* arroz-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D4F1A1CF81400370462 /* arroz-01.jpg */; };
+		EB029D801A1CF81400370462 /* azucar-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D501A1CF81400370462 /* azucar-01.jpg */; };
+		EB029D811A1CF81400370462 /* catsup-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D511A1CF81400370462 /* catsup-01.jpg */; };
+		EB029D821A1CF81400370462 /* cereal-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D521A1CF81400370462 /* cereal-01.jpg */; };
+		EB029D831A1CF81400370462 /* dulces-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D531A1CF81400370462 /* dulces-01.jpg */; };
+		EB029D841A1CF81400370462 /* fresa-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D541A1CF81400370462 /* fresa-01.jpg */; };
+		EB029D851A1CF81400370462 /* frijoles-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D551A1CF81400370462 /* frijoles-01.jpg */; };
+		EB029D861A1CF81400370462 /* galletas-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D561A1CF81400370462 /* galletas-01.jpg */; };
+		EB029D871A1CF81400370462 /* harina-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D571A1CF81400370462 /* harina-01.jpg */; };
+		EB029D881A1CF81400370462 /* jamon-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D581A1CF81400370462 /* jamon-01.jpg */; };
+		EB029D891A1CF81400370462 /* jitomate-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D591A1CF81400370462 /* jitomate-01.jpg */; };
+		EB029D8A1A1CF81400370462 /* jugo-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D5A1A1CF81400370462 /* jugo-01.jpg */; };
+		EB029D8B1A1CF81400370462 /* Limon.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D5B1A1CF81400370462 /* Limon.png */; };
+		EB029D8C1A1CF81400370462 /* Mandarina.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D5C1A1CF81400370462 /* Mandarina.png */; };
+		EB029D8D1A1CF81400370462 /* mantequilla-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D5D1A1CF81400370462 /* mantequilla-01.jpg */; };
+		EB029D8E1A1CF81400370462 /* manzana-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D5E1A1CF81400370462 /* manzana-01.jpg */; };
+		EB029D8F1A1CF81400370462 /* mayonesa-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D5F1A1CF81400370462 /* mayonesa-01.jpg */; };
+		EB029D901A1CF81400370462 /* miel-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D601A1CF81400370462 /* miel-01.jpg */; };
+		EB029D911A1CF81400370462 /* mostaza-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D611A1CF81400370462 /* mostaza-01.jpg */; };
+		EB029D921A1CF81400370462 /* pan-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D621A1CF81400370462 /* pan-01.jpg */; };
+		EB029D931A1CF81400370462 /* Pera.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D631A1CF81400370462 /* Pera.png */; };
+		EB029D941A1CF81400370462 /* platano-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D641A1CF81400370462 /* platano-01.jpg */; };
+		EB029D951A1CF81400370462 /* pollo-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D651A1CF81400370462 /* pollo-01.jpg */; };
+		EB029D961A1CF81400370462 /* Sal-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D661A1CF81400370462 /* Sal-01.jpg */; };
+		EB029D971A1CF81400370462 /* salsa-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D671A1CF81400370462 /* salsa-01.jpg */; };
+		EB029D981A1CF81400370462 /* semillas-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D681A1CF81400370462 /* semillas-01.jpg */; };
+		EB029D991A1CF81400370462 /* servilletas-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D691A1CF81400370462 /* servilletas-01.jpg */; };
+		EB029D9A1A1CF81400370462 /* te-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D6A1A1CF81400370462 /* te-01.jpg */; };
+		EB029D9B1A1CF81400370462 /* Toronja.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D6B1A1CF81400370462 /* Toronja.png */; };
+		EB029D9C1A1CF81400370462 /* tortillas-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D6C1A1CF81400370462 /* tortillas-01.jpg */; };
+		EB029D9D1A1CF81400370462 /* yogurt-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D6D1A1CF81400370462 /* yogurt-01.jpg */; };
+		EB029D9E1A1CF81400370462 /* zanahoria-01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EB029D6E1A1CF81400370462 /* zanahoria-01.jpg */; };
+		EB029D9F1A1CF81400370462 /* Desmaquillante.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D701A1CF81400370462 /* Desmaquillante.png */; };
+		EB029DA01A1CF81400370462 /* Deportes.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D721A1CF81400370462 /* Deportes.png */; };
+		EB029DA11A1CF81400370462 /* Negocio.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D731A1CF81400370462 /* Negocio.png */; };
+		EB029DA81A1CF88000370462 /* imagenesCategorias in Resources */ = {isa = PBXBuildFile; fileRef = EB029DA71A1CF88000370462 /* imagenesCategorias */; };
 		EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */; };
 		EB400E841A0B0B91003F5C7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400E831A0B0B91003F5C7D /* main.m */; };
 		EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400E861A0B0B91003F5C7D /* AppDelegate.m */; };
@@ -27,11 +76,11 @@
 		EB8F1BDB1A145F2B008DACB7 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BDA1A145F2B008DACB7 /* Usuario.m */; };
 		EB8F1BDE1A145F2B008DACB7 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BDD1A145F2B008DACB7 /* Categoria.m */; };
 		EB8F1BE11A145F2B008DACB7 /* Producto.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BE01A145F2B008DACB7 /* Producto.m */; };
+		EBC61E811A156264007E683F /* cubiertos_fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC61E801A156264007E683F /* cubiertos_fondo.png */; };
+		EBC61E971A156C5C007E683F /* header_cocina.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC61E961A156C5C007E683F /* header_cocina.png */; };
 		EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */; };
 		EBC7DD4B1A15438F00150A23 /* cuadro.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD4A1A15438F00150A23 /* cuadro.png */; };
 		EBC7DD4D1A1543FC00150A23 /* florecitas.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD4C1A1543FC00150A23 /* florecitas.png */; };
-		EBC7DD4F1A15481B00150A23 /* imagenesSecciones in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD4E1A15481B00150A23 /* imagenesSecciones */; };
-		EBC7DD511A15484400150A23 /* pato.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD501A15484400150A23 /* pato.jpg */; };
 		EBCA1F571A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */; };
 		EBCA1F5A1A0D818D00AFBE0B /* UsuariosCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F591A0D818D00AFBE0B /* UsuariosCollectionViewCell.m */; };
 		EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EBCA1F611A0D913500AFBE0B /* CategoriasCollectionViewController.m */; };
@@ -52,6 +101,55 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EB029D3B1A1CF7D300370462 /* imagenesProductos */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenesProductos; sourceTree = "<group>"; };
+		EB029D3C1A1CF7D300370462 /* imagenesSecciones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenesSecciones; sourceTree = "<group>"; };
+		EB029D411A1CF81400370462 /* Categoría_Baño-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Categoría_Baño-02.png"; sourceTree = "<group>"; };
+		EB029D421A1CF81400370462 /* Categoría_Higiene personal-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Categoría_Higiene personal-02.png"; sourceTree = "<group>"; };
+		EB029D451A1CF81400370462 /* aromatizante-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aromatizante-01.jpg"; sourceTree = "<group>"; };
+		EB029D461A1CF81400370462 /* limpiador-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "limpiador-01.jpg"; sourceTree = "<group>"; };
+		EB029D471A1CF81400370462 /* pañuelos-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pañuelos-01.jpg"; sourceTree = "<group>"; };
+		EB029D491A1CF81400370462 /* aceite-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aceite-01.jpg"; sourceTree = "<group>"; };
+		EB029D4A1A1CF81400370462 /* aderezos-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aderezos-01.jpg"; sourceTree = "<group>"; };
+		EB029D4B1A1CF81400370462 /* agua-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "agua-01.jpg"; sourceTree = "<group>"; };
+		EB029D4C1A1CF81400370462 /* Aguacate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Aguacate.png; sourceTree = "<group>"; };
+		EB029D4D1A1CF81400370462 /* Ajo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ajo.png; sourceTree = "<group>"; };
+		EB029D4E1A1CF81400370462 /* Apio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Apio.png; sourceTree = "<group>"; };
+		EB029D4F1A1CF81400370462 /* arroz-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arroz-01.jpg"; sourceTree = "<group>"; };
+		EB029D501A1CF81400370462 /* azucar-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "azucar-01.jpg"; sourceTree = "<group>"; };
+		EB029D511A1CF81400370462 /* catsup-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "catsup-01.jpg"; sourceTree = "<group>"; };
+		EB029D521A1CF81400370462 /* cereal-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "cereal-01.jpg"; sourceTree = "<group>"; };
+		EB029D531A1CF81400370462 /* dulces-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dulces-01.jpg"; sourceTree = "<group>"; };
+		EB029D541A1CF81400370462 /* fresa-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "fresa-01.jpg"; sourceTree = "<group>"; };
+		EB029D551A1CF81400370462 /* frijoles-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "frijoles-01.jpg"; sourceTree = "<group>"; };
+		EB029D561A1CF81400370462 /* galletas-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "galletas-01.jpg"; sourceTree = "<group>"; };
+		EB029D571A1CF81400370462 /* harina-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "harina-01.jpg"; sourceTree = "<group>"; };
+		EB029D581A1CF81400370462 /* jamon-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jamon-01.jpg"; sourceTree = "<group>"; };
+		EB029D591A1CF81400370462 /* jitomate-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jitomate-01.jpg"; sourceTree = "<group>"; };
+		EB029D5A1A1CF81400370462 /* jugo-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "jugo-01.jpg"; sourceTree = "<group>"; };
+		EB029D5B1A1CF81400370462 /* Limon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Limon.png; sourceTree = "<group>"; };
+		EB029D5C1A1CF81400370462 /* Mandarina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mandarina.png; sourceTree = "<group>"; };
+		EB029D5D1A1CF81400370462 /* mantequilla-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mantequilla-01.jpg"; sourceTree = "<group>"; };
+		EB029D5E1A1CF81400370462 /* manzana-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "manzana-01.jpg"; sourceTree = "<group>"; };
+		EB029D5F1A1CF81400370462 /* mayonesa-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mayonesa-01.jpg"; sourceTree = "<group>"; };
+		EB029D601A1CF81400370462 /* miel-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "miel-01.jpg"; sourceTree = "<group>"; };
+		EB029D611A1CF81400370462 /* mostaza-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "mostaza-01.jpg"; sourceTree = "<group>"; };
+		EB029D621A1CF81400370462 /* pan-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pan-01.jpg"; sourceTree = "<group>"; };
+		EB029D631A1CF81400370462 /* Pera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pera.png; sourceTree = "<group>"; };
+		EB029D641A1CF81400370462 /* platano-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "platano-01.jpg"; sourceTree = "<group>"; };
+		EB029D651A1CF81400370462 /* pollo-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pollo-01.jpg"; sourceTree = "<group>"; };
+		EB029D661A1CF81400370462 /* Sal-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Sal-01.jpg"; sourceTree = "<group>"; };
+		EB029D671A1CF81400370462 /* salsa-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "salsa-01.jpg"; sourceTree = "<group>"; };
+		EB029D681A1CF81400370462 /* semillas-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "semillas-01.jpg"; sourceTree = "<group>"; };
+		EB029D691A1CF81400370462 /* servilletas-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "servilletas-01.jpg"; sourceTree = "<group>"; };
+		EB029D6A1A1CF81400370462 /* te-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "te-01.jpg"; sourceTree = "<group>"; };
+		EB029D6B1A1CF81400370462 /* Toronja.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Toronja.png; sourceTree = "<group>"; };
+		EB029D6C1A1CF81400370462 /* tortillas-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tortillas-01.jpg"; sourceTree = "<group>"; };
+		EB029D6D1A1CF81400370462 /* yogurt-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "yogurt-01.jpg"; sourceTree = "<group>"; };
+		EB029D6E1A1CF81400370462 /* zanahoria-01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "zanahoria-01.jpg"; sourceTree = "<group>"; };
+		EB029D701A1CF81400370462 /* Desmaquillante.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Desmaquillante.png; sourceTree = "<group>"; };
+		EB029D721A1CF81400370462 /* Deportes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Deportes.png; sourceTree = "<group>"; };
+		EB029D731A1CF81400370462 /* Negocio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Negocio.png; sourceTree = "<group>"; };
+		EB029DA71A1CF88000370462 /* imagenesCategorias */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenesCategorias; sourceTree = "<group>"; };
 		EB0CBC531A0C10C70037F86A /* ProductosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductosTableViewController.h; sourceTree = "<group>"; };
 		EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosTableViewController.m; sourceTree = "<group>"; };
 		EB400E7E1A0B0B91003F5C7D /* AppNegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,11 +190,11 @@
 		EB8F1BDF1A145F2B008DACB7 /* Producto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Producto.h; sourceTree = "<group>"; };
 		EB8F1BE01A145F2B008DACB7 /* Producto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Producto.m; sourceTree = "<group>"; };
 		EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AppNegocios 2.xcdatamodel"; sourceTree = "<group>"; };
+		EBC61E801A156264007E683F /* cubiertos_fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cubiertos_fondo.png; sourceTree = "<group>"; };
+		EBC61E961A156C5C007E683F /* header_cocina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_cocina.png; sourceTree = "<group>"; };
 		EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "stuff_DOS-01.png"; sourceTree = "<group>"; };
 		EBC7DD4A1A15438F00150A23 /* cuadro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cuadro.png; sourceTree = "<group>"; };
 		EBC7DD4C1A1543FC00150A23 /* florecitas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = florecitas.png; sourceTree = "<group>"; };
-		EBC7DD4E1A15481B00150A23 /* imagenesSecciones */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenesSecciones; sourceTree = "<group>"; };
-		EBC7DD501A15484400150A23 /* pato.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = pato.jpg; path = imagenesSecciones/pato.jpg; sourceTree = "<group>"; };
 		EBCA1F551A0D7E3A00AFBE0B /* UsuariosCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewController.h; sourceTree = "<group>"; };
 		EBCA1F561A0D7E3A00AFBE0B /* UsuariosCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsuariosCollectionViewController.m; sourceTree = "<group>"; };
 		EBCA1F581A0D818D00AFBE0B /* UsuariosCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsuariosCollectionViewCell.h; sourceTree = "<group>"; };
@@ -130,9 +228,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EB029D401A1CF81400370462 /* imagenesCategoria */ = {
+			isa = PBXGroup;
+			children = (
+				EB029D411A1CF81400370462 /* Categoría_Baño-02.png */,
+				EB029D421A1CF81400370462 /* Categoría_Higiene personal-02.png */,
+			);
+			path = imagenesCategoria;
+			sourceTree = "<group>";
+		};
+		EB029D431A1CF81400370462 /* imagenesProductos */ = {
+			isa = PBXGroup;
+			children = (
+				EB029D441A1CF81400370462 /* Automovil */,
+				EB029D481A1CF81400370462 /* Cocina */,
+				EB029D6F1A1CF81400370462 /* Higiene personal */,
+			);
+			path = imagenesProductos;
+			sourceTree = "<group>";
+		};
+		EB029D441A1CF81400370462 /* Automovil */ = {
+			isa = PBXGroup;
+			children = (
+				EB029D451A1CF81400370462 /* aromatizante-01.jpg */,
+				EB029D461A1CF81400370462 /* limpiador-01.jpg */,
+				EB029D471A1CF81400370462 /* pañuelos-01.jpg */,
+			);
+			path = Automovil;
+			sourceTree = "<group>";
+		};
+		EB029D481A1CF81400370462 /* Cocina */ = {
+			isa = PBXGroup;
+			children = (
+				EB029D491A1CF81400370462 /* aceite-01.jpg */,
+				EB029D4A1A1CF81400370462 /* aderezos-01.jpg */,
+				EB029D4B1A1CF81400370462 /* agua-01.jpg */,
+				EB029D4C1A1CF81400370462 /* Aguacate.png */,
+				EB029D4D1A1CF81400370462 /* Ajo.png */,
+				EB029D4E1A1CF81400370462 /* Apio.png */,
+				EB029D4F1A1CF81400370462 /* arroz-01.jpg */,
+				EB029D501A1CF81400370462 /* azucar-01.jpg */,
+				EB029D511A1CF81400370462 /* catsup-01.jpg */,
+				EB029D521A1CF81400370462 /* cereal-01.jpg */,
+				EB029D531A1CF81400370462 /* dulces-01.jpg */,
+				EB029D541A1CF81400370462 /* fresa-01.jpg */,
+				EB029D551A1CF81400370462 /* frijoles-01.jpg */,
+				EB029D561A1CF81400370462 /* galletas-01.jpg */,
+				EB029D571A1CF81400370462 /* harina-01.jpg */,
+				EB029D581A1CF81400370462 /* jamon-01.jpg */,
+				EB029D591A1CF81400370462 /* jitomate-01.jpg */,
+				EB029D5A1A1CF81400370462 /* jugo-01.jpg */,
+				EB029D5B1A1CF81400370462 /* Limon.png */,
+				EB029D5C1A1CF81400370462 /* Mandarina.png */,
+				EB029D5D1A1CF81400370462 /* mantequilla-01.jpg */,
+				EB029D5E1A1CF81400370462 /* manzana-01.jpg */,
+				EB029D5F1A1CF81400370462 /* mayonesa-01.jpg */,
+				EB029D601A1CF81400370462 /* miel-01.jpg */,
+				EB029D611A1CF81400370462 /* mostaza-01.jpg */,
+				EB029D621A1CF81400370462 /* pan-01.jpg */,
+				EB029D631A1CF81400370462 /* Pera.png */,
+				EB029D641A1CF81400370462 /* platano-01.jpg */,
+				EB029D651A1CF81400370462 /* pollo-01.jpg */,
+				EB029D661A1CF81400370462 /* Sal-01.jpg */,
+				EB029D671A1CF81400370462 /* salsa-01.jpg */,
+				EB029D681A1CF81400370462 /* semillas-01.jpg */,
+				EB029D691A1CF81400370462 /* servilletas-01.jpg */,
+				EB029D6A1A1CF81400370462 /* te-01.jpg */,
+				EB029D6B1A1CF81400370462 /* Toronja.png */,
+				EB029D6C1A1CF81400370462 /* tortillas-01.jpg */,
+				EB029D6D1A1CF81400370462 /* yogurt-01.jpg */,
+				EB029D6E1A1CF81400370462 /* zanahoria-01.jpg */,
+			);
+			path = Cocina;
+			sourceTree = "<group>";
+		};
+		EB029D6F1A1CF81400370462 /* Higiene personal */ = {
+			isa = PBXGroup;
+			children = (
+				EB029D701A1CF81400370462 /* Desmaquillante.png */,
+			);
+			path = "Higiene personal";
+			sourceTree = "<group>";
+		};
+		EB029D711A1CF81400370462 /* imagenesSecciones */ = {
+			isa = PBXGroup;
+			children = (
+				EB029D721A1CF81400370462 /* Deportes.png */,
+				EB029D731A1CF81400370462 /* Negocio.png */,
+			);
+			path = imagenesSecciones;
+			sourceTree = "<group>";
+		};
 		EB400E751A0B0B91003F5C7D = {
 			isa = PBXGroup;
 			children = (
+				EB029DA71A1CF88000370462 /* imagenesCategorias */,
+				EB029D3B1A1CF7D300370462 /* imagenesProductos */,
+				EB029D3C1A1CF7D300370462 /* imagenesSecciones */,
 				EB400E801A0B0B91003F5C7D /* AppNegocios */,
 				EB400E9D1A0B0B91003F5C7D /* AppNegociosTests */,
 				EB400E7F1A0B0B91003F5C7D /* Products */,
@@ -151,7 +343,9 @@
 		EB400E801A0B0B91003F5C7D /* AppNegocios */ = {
 			isa = PBXGroup;
 			children = (
-				EBC7DD4E1A15481B00150A23 /* imagenesSecciones */,
+				EB029D401A1CF81400370462 /* imagenesCategoria */,
+				EB029D431A1CF81400370462 /* imagenesProductos */,
+				EB029D711A1CF81400370462 /* imagenesSecciones */,
 				EB8F1BE21A1468F5008DACB7 /* imagenesUsuarios */,
 				EB400E851A0B0B91003F5C7D /* AppDelegate.h */,
 				EB400E861A0B0B91003F5C7D /* AppDelegate.m */,
@@ -266,8 +460,9 @@
 		EB8F1BE21A1468F5008DACB7 /* imagenesUsuarios */ = {
 			isa = PBXGroup;
 			children = (
+				EBC61E961A156C5C007E683F /* header_cocina.png */,
+				EBC61E801A156264007E683F /* cubiertos_fondo.png */,
 				EBD3CE3F1A1550A2006E9849 /* casita_fondo.png */,
-				EBC7DD501A15484400150A23 /* pato.jpg */,
 				EBC7DD4C1A1543FC00150A23 /* florecitas.png */,
 				EBC7DD4A1A15438F00150A23 /* cuadro.png */,
 				EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */,
@@ -425,13 +620,62 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBC7DD4D1A1543FC00150A23 /* florecitas.png in Resources */,
+				EB029D8E1A1CF81400370462 /* manzana-01.jpg in Resources */,
+				EB029D861A1CF81400370462 /* galletas-01.jpg in Resources */,
+				EB029D851A1CF81400370462 /* frijoles-01.jpg in Resources */,
+				EB029D741A1CF81400370462 /* Categoría_Baño-02.png in Resources */,
+				EB029D821A1CF81400370462 /* cereal-01.jpg in Resources */,
 				EB400E901A0B0B91003F5C7D /* Main.storyboard in Resources */,
+				EB029D811A1CF81400370462 /* catsup-01.jpg in Resources */,
+				EB029D8F1A1CF81400370462 /* mayonesa-01.jpg in Resources */,
+				EB029D761A1CF81400370462 /* aromatizante-01.jpg in Resources */,
+				EB029D951A1CF81400370462 /* pollo-01.jpg in Resources */,
+				EB029D7E1A1CF81400370462 /* Apio.png in Resources */,
+				EB029D911A1CF81400370462 /* mostaza-01.jpg in Resources */,
+				EB029D9F1A1CF81400370462 /* Desmaquillante.png in Resources */,
+				EB029D791A1CF81400370462 /* aceite-01.jpg in Resources */,
+				EB029D991A1CF81400370462 /* servilletas-01.jpg in Resources */,
+				EBC61E971A156C5C007E683F /* header_cocina.png in Resources */,
 				EBC7DD4B1A15438F00150A23 /* cuadro.png in Resources */,
-				EBC7DD511A15484400150A23 /* pato.jpg in Resources */,
+				EB029D8A1A1CF81400370462 /* jugo-01.jpg in Resources */,
+				EB029D801A1CF81400370462 /* azucar-01.jpg in Resources */,
+				EB029D881A1CF81400370462 /* jamon-01.jpg in Resources */,
 				EB400E951A0B0B91003F5C7D /* LaunchScreen.xib in Resources */,
 				EB400E921A0B0B91003F5C7D /* Images.xcassets in Resources */,
+				EB029D891A1CF81400370462 /* jitomate-01.jpg in Resources */,
+				EB029D831A1CF81400370462 /* dulces-01.jpg in Resources */,
+				EB029D7B1A1CF81400370462 /* agua-01.jpg in Resources */,
+				EB029D751A1CF81400370462 /* Categoría_Higiene personal-02.png in Resources */,
+				EB029DA11A1CF81400370462 /* Negocio.png in Resources */,
 				EBD3CE401A1550A2006E9849 /* casita_fondo.png in Resources */,
-				EBC7DD4F1A15481B00150A23 /* imagenesSecciones in Resources */,
+				EB029D961A1CF81400370462 /* Sal-01.jpg in Resources */,
+				EBC61E811A156264007E683F /* cubiertos_fondo.png in Resources */,
+				EB029D7F1A1CF81400370462 /* arroz-01.jpg in Resources */,
+				EB029D7A1A1CF81400370462 /* aderezos-01.jpg in Resources */,
+				EB029DA81A1CF88000370462 /* imagenesCategorias in Resources */,
+				EB029D7C1A1CF81400370462 /* Aguacate.png in Resources */,
+				EB029D981A1CF81400370462 /* semillas-01.jpg in Resources */,
+				EB029D8B1A1CF81400370462 /* Limon.png in Resources */,
+				EB029D901A1CF81400370462 /* miel-01.jpg in Resources */,
+				EB029D921A1CF81400370462 /* pan-01.jpg in Resources */,
+				EB029D841A1CF81400370462 /* fresa-01.jpg in Resources */,
+				EB029D9E1A1CF81400370462 /* zanahoria-01.jpg in Resources */,
+				EB029D3E1A1CF7D300370462 /* imagenesProductos in Resources */,
+				EB029D8D1A1CF81400370462 /* mantequilla-01.jpg in Resources */,
+				EB029D3F1A1CF7D300370462 /* imagenesSecciones in Resources */,
+				EB029D771A1CF81400370462 /* limpiador-01.jpg in Resources */,
+				EB029D9C1A1CF81400370462 /* tortillas-01.jpg in Resources */,
+				EB029D8C1A1CF81400370462 /* Mandarina.png in Resources */,
+				EB029D9B1A1CF81400370462 /* Toronja.png in Resources */,
+				EB029D931A1CF81400370462 /* Pera.png in Resources */,
+				EB029D9A1A1CF81400370462 /* te-01.jpg in Resources */,
+				EB029DA01A1CF81400370462 /* Deportes.png in Resources */,
+				EB029D781A1CF81400370462 /* pañuelos-01.jpg in Resources */,
+				EB029D871A1CF81400370462 /* harina-01.jpg in Resources */,
+				EB029D7D1A1CF81400370462 /* Ajo.png in Resources */,
+				EB029D9D1A1CF81400370462 /* yogurt-01.jpg in Resources */,
+				EB029D971A1CF81400370462 /* salsa-01.jpg in Resources */,
+				EB029D941A1CF81400370462 /* platano-01.jpg in Resources */,
 				EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -530,6 +774,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Francisco Pedro Contreras Nava (R8AW8N75Y4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -571,6 +816,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Francisco Pedro Contreras Nava (R8AW8N75Y4)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
