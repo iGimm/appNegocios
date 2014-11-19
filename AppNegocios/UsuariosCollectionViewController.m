@@ -114,12 +114,12 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     // Configure the cell
-    cell.layer.borderWidth = 1.0f;
-    cell.layer.borderColor = [[UIColor blueColor] CGColor];
-    cell.labelNombreSeccion.textColor = [UIColor blueColor];
+    /*cell.layer.borderWidth = 1.0f;
+    cell.layer.borderColor = [[UIColor blueColor] CGColor];*/
+    cell.labelNombreSeccion.textColor = [UIColor whiteColor];
     cell.labelNombreSeccion.text =  currentUsuario.nombreUsuario;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
-    cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
+    cell.labelNombreSeccion.textAlignment = NSTextAlignmentLeft;
     cell.imageView.image = [UIImage imageNamed:currentUsuario.nombreImagen];
     
     return cell;

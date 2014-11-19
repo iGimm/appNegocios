@@ -150,6 +150,7 @@
 		EB029D721A1CF81400370462 /* Deportes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Deportes.png; sourceTree = "<group>"; };
 		EB029D731A1CF81400370462 /* Negocio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Negocio.png; sourceTree = "<group>"; };
 		EB029DA71A1CF88000370462 /* imagenesCategorias */ = {isa = PBXFileReference; lastKnownFileType = folder; path = imagenesCategorias; sourceTree = "<group>"; };
+		EB029DA91A1D03E600370462 /* AppNegocios 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AppNegocios 4.xcdatamodel"; sourceTree = "<group>"; };
 		EB0CBC531A0C10C70037F86A /* ProductosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductosTableViewController.h; sourceTree = "<group>"; };
 		EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosTableViewController.m; sourceTree = "<group>"; };
 		EB400E7E1A0B0B91003F5C7D /* AppNegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -927,6 +928,7 @@
 		EB400E881A0B0B91003F5C7D /* AppNegocios.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				EB029DA91A1D03E600370462 /* AppNegocios 4.xcdatamodel */,
 				EB8F1BD11A1452C5008DACB7 /* AppNegocios 3.xcdatamodel */,
 				EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */,
 				EB400E891A0B0B91003F5C7D /* AppNegocios.xcdatamodel */,

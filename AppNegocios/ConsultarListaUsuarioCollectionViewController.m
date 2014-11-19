@@ -41,7 +41,7 @@ static NSString * const reuseIdentifier = @"Cell";
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", @"pedro" ];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", @"Pedro" ];
     
     [busqueda setEntity:entityDescription];
     [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
@@ -113,6 +113,9 @@ static NSString * const reuseIdentifier = @"Cell";
     return reusableview;
 }
 
+
+
+
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UsuariosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     
@@ -129,13 +132,28 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
     cell.imageView.image = [UIImage imageNamed:currentProducto.nombreImagen];
     
+    CGRect screenRect = cell.imageView.bounds;
+    
+    //Multiplicarlo por un factor para obtener el restante
+    //screenRect.origin.y += screenRect.size.height/2;
+    //screenRect.size.height = screenRect.size.height/2;
+    
+    
+    //create a new view with the same size
+    UIView* coverView = [[UIView alloc] initWithFrame:screenRect];
+    // change the background color to black and the opacity to 0.6
+    coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+    // add this new view to your main view
+    [cell.imageView addSubview:coverView];
+    
+    
     return cell;
 }
 
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(100, 100);
+    return CGSizeMake(120, 120);
 }
 
 
