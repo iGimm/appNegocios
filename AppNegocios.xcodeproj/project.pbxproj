@@ -57,6 +57,8 @@
 		EB029DA11A1CF81400370462 /* Negocio.png in Resources */ = {isa = PBXBuildFile; fileRef = EB029D731A1CF81400370462 /* Negocio.png */; };
 		EB029DA81A1CF88000370462 /* imagenesCategorias in Resources */ = {isa = PBXBuildFile; fileRef = EB029DA71A1CF88000370462 /* imagenesCategorias */; };
 		EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */; };
+		EB215DCB1A2A86B100C5F164 /* FechasProducto.m in Sources */ = {isa = PBXBuildFile; fileRef = EB215DCA1A2A86B100C5F164 /* FechasProducto.m */; };
+		EB215DCE1A2A86D300C5F164 /* Producto.m in Sources */ = {isa = PBXBuildFile; fileRef = EB215DCD1A2A86D300C5F164 /* Producto.m */; };
 		EB400E841A0B0B91003F5C7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400E831A0B0B91003F5C7D /* main.m */; };
 		EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EB400E861A0B0B91003F5C7D /* AppDelegate.m */; };
 		EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EB400E881A0B0B91003F5C7D /* AppNegocios.xcdatamodeld */; };
@@ -75,7 +77,6 @@
 		EB8F1BD81A145473008DACB7 /* ImageCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BD71A145473008DACB7 /* ImageCollectionViewCell.m */; };
 		EB8F1BDB1A145F2B008DACB7 /* Usuario.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BDA1A145F2B008DACB7 /* Usuario.m */; };
 		EB8F1BDE1A145F2B008DACB7 /* Categoria.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BDD1A145F2B008DACB7 /* Categoria.m */; };
-		EB8F1BE11A145F2B008DACB7 /* Producto.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8F1BE01A145F2B008DACB7 /* Producto.m */; };
 		EBC61E811A156264007E683F /* cubiertos_fondo.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC61E801A156264007E683F /* cubiertos_fondo.png */; };
 		EBC61E971A156C5C007E683F /* header_cocina.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC61E961A156C5C007E683F /* header_cocina.png */; };
 		EBC7DD491A153F0E00150A23 /* stuff_DOS-01.png in Resources */ = {isa = PBXBuildFile; fileRef = EBC7DD481A153F0E00150A23 /* stuff_DOS-01.png */; };
@@ -153,6 +154,10 @@
 		EB029DA91A1D03E600370462 /* AppNegocios 4.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AppNegocios 4.xcdatamodel"; sourceTree = "<group>"; };
 		EB0CBC531A0C10C70037F86A /* ProductosTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductosTableViewController.h; sourceTree = "<group>"; };
 		EB0CBC541A0C10C70037F86A /* ProductosTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductosTableViewController.m; sourceTree = "<group>"; };
+		EB215DC91A2A86B100C5F164 /* FechasProducto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FechasProducto.h; sourceTree = "<group>"; };
+		EB215DCA1A2A86B100C5F164 /* FechasProducto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FechasProducto.m; sourceTree = "<group>"; };
+		EB215DCC1A2A86D300C5F164 /* Producto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Producto.h; sourceTree = "<group>"; };
+		EB215DCD1A2A86D300C5F164 /* Producto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Producto.m; sourceTree = "<group>"; };
 		EB400E7E1A0B0B91003F5C7D /* AppNegocios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppNegocios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB400E821A0B0B91003F5C7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB400E831A0B0B91003F5C7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -188,8 +193,6 @@
 		EB8F1BDA1A145F2B008DACB7 /* Usuario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Usuario.m; sourceTree = "<group>"; };
 		EB8F1BDC1A145F2B008DACB7 /* Categoria.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Categoria.h; sourceTree = "<group>"; };
 		EB8F1BDD1A145F2B008DACB7 /* Categoria.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Categoria.m; sourceTree = "<group>"; };
-		EB8F1BDF1A145F2B008DACB7 /* Producto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Producto.h; sourceTree = "<group>"; };
-		EB8F1BE01A145F2B008DACB7 /* Producto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Producto.m; sourceTree = "<group>"; };
 		EBB25C0E1A0DC9E2003B62E1 /* AppNegocios 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "AppNegocios 2.xcdatamodel"; sourceTree = "<group>"; };
 		EBC61E801A156264007E683F /* cubiertos_fondo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cubiertos_fondo.png; sourceTree = "<group>"; };
 		EBC61E961A156C5C007E683F /* header_cocina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header_cocina.png; sourceTree = "<group>"; };
@@ -428,8 +431,10 @@
 			isa = PBXGroup;
 			children = (
 				EB400E881A0B0B91003F5C7D /* AppNegocios.xcdatamodeld */,
-				EB8F1BDF1A145F2B008DACB7 /* Producto.h */,
-				EB8F1BE01A145F2B008DACB7 /* Producto.m */,
+				EB215DCC1A2A86D300C5F164 /* Producto.h */,
+				EB215DCD1A2A86D300C5F164 /* Producto.m */,
+				EB215DC91A2A86B100C5F164 /* FechasProducto.h */,
+				EB215DCA1A2A86B100C5F164 /* FechasProducto.m */,
 				EB8F1BDC1A145F2B008DACB7 /* Categoria.h */,
 				EB8F1BDD1A145F2B008DACB7 /* Categoria.m */,
 				EB8F1BD91A145F2B008DACB7 /* Usuario.h */,
@@ -697,16 +702,17 @@
 			files = (
 				EB8F1BDB1A145F2B008DACB7 /* Usuario.m in Sources */,
 				EB400EC11A0B34DD003F5C7D /* CrearCategoriaViewController.m in Sources */,
+				EB215DCE1A2A86D300C5F164 /* Producto.m in Sources */,
 				EB400E871A0B0B91003F5C7D /* AppDelegate.m in Sources */,
 				EB0CBC551A0C10C70037F86A /* ProductosTableViewController.m in Sources */,
 				EB400EB51A0B12B1003F5C7D /* UsuariosTableViewController.m in Sources */,
 				EB7DEE0E1A0BE1A6000EDF4E /* CreateProductViewController.m in Sources */,
 				EBCA1F691A0D9B3200AFBE0B /* ProductosCollectionViewController.m in Sources */,
+				EB215DCB1A2A86B100C5F164 /* FechasProducto.m in Sources */,
 				EB400EB81A0B1959003F5C7D /* CreateUserViewController.m in Sources */,
 				EBD108A31A128FEC00B37F0F /* HeaderViewCollectionReusableView.m in Sources */,
 				EB8F1BD81A145473008DACB7 /* ImageCollectionViewCell.m in Sources */,
 				EB400E8A1A0B0B91003F5C7D /* AppNegocios.xcdatamodeld in Sources */,
-				EB8F1BE11A145F2B008DACB7 /* Producto.m in Sources */,
 				EBCA1F621A0D913500AFBE0B /* CategoriasCollectionViewController.m in Sources */,
 				EB8F1BDE1A145F2B008DACB7 /* Categoria.m in Sources */,
 				EB400E841A0B0B91003F5C7D /* main.m in Sources */,
