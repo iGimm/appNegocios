@@ -398,7 +398,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="75B-Lx-LD0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="zcq-Tp-N1z" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2159" y="-682"/>
+            <point key="canvasLocation" x="2303" y="-612"/>
         </scene>
         <!--Image Picker Collection View Controller-->
         <scene sceneID="fe9-25-gDA">
@@ -520,6 +520,37 @@
             </objects>
             <point key="canvasLocation" x="898" y="802"/>
         </scene>
+        <!--Usuarios Table View Controller-->
+        <scene sceneID="9jC-Jh-xC7">
+            <objects>
+                <tableViewController id="ljW-Em-swP" customClass="UsuariosTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="QwL-6z-sYJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="2OM-KP-czx">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2OM-KP-czx" id="LLu-03-lax">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="vrS-s2-qYm" kind="unwind" identifier="unwindToListUser" trigger="accessoryAction" unwindAction="unwindToSelectedUser:" id="NE4-LA-nhV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ljW-Em-swP" id="Jdl-Ea-0fr"/>
+                            <outlet property="delegate" destination="ljW-Em-swP" id="jFI-ST-Rgh"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="cDn-eJ-TQA"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dwS-yh-d88" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="vrS-s2-qYm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2379" y="-1436"/>
+        </scene>
         <!--Consultar Lista Usuario Collection View Controller-->
         <scene sceneID="7ZH-MI-lv7">
             <objects>
@@ -592,7 +623,24 @@
                             <outlet property="delegate" destination="3Jh-gZ-VA5" id="OLe-aY-dfI"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="6ow-e3-Jxm"/>
+                    <navigationItem key="navigationItem" id="03L-RT-VtU">
+                        <nil key="title"/>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="P2J-6q-8Fk">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Usuario">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <segue destination="O1i-Qi-n3Y" kind="popoverPresentation" identifier="showPopover" popoverAnchorView="P2J-6q-8Fk" id="aPv-5U-clx">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    <popoverPassthroughViews>
+                                        <collectionView reference="ZCn-9K-s36"/>
+                                    </popoverPassthroughViews>
+                                </segue>
+                            </connections>
+                        </button>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vMt-cc-WcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -861,6 +909,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15h-ri-puu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3559" y="1505"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Okg-Pe-Xmk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="O1i-Qi-n3Y" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mQ7-wV-MaR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ljW-Em-swP" kind="relationship" relationship="rootViewController" id="l4J-11-Sjd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3G8-l8-ZiK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1585" y="-1436"/>
         </scene>
     </scenes>
     <resources>

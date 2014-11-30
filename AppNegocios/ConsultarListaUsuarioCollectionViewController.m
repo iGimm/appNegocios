@@ -9,6 +9,7 @@
 #import "ConsultarListaUsuarioCollectionViewController.h"
 #import "AppDelegate.h"
 #import "UsuariosCollectionViewCell.h"
+#import "UsuariosTableViewController.h"
 #import "HeaderViewCollectionReusableView.h"
 
 @interface ConsultarListaUsuarioCollectionViewController ()
@@ -31,7 +32,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(20.0f, 0, 20.0f, 0);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 0, 15);
+
 
     //[self setTitle:_categoria.nombreCategoria];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
@@ -46,6 +48,7 @@ static NSString * const reuseIdentifier = @"Cell";
     [busqueda setEntity:entityDescription];
     [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
     [busqueda setPredicate:predicate];
+    
     
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:busqueda managedObjectContext:_managedObjectContext sectionNameKeyPath:@"category.nombreCategoria" cacheName:nil];
@@ -234,5 +237,59 @@ static NSString * const reuseIdentifier = @"Cell";
     }];
 }
 
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
+}
+
+
+-(void)updateList:(NSString *)nombreUsuario{
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Producto" inManagedObjectContext:_managedObjectContext];
+    NSError *error =nil;
+    //Load items
+    
+    NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", nombreUsuario ];
+    
+    [busqueda setEntity:entityDescription];
+    [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
+    [busqueda setPredicate:predicate];
+    
+    
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:busqueda managedObjectContext:_managedObjectContext sectionNameKeyPath:@"category.nombreCategoria" cacheName:nil];
+    
+    if(![_fetchedResultsController performFetch:&error]){
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"Hubo un error al hacer la búsqueda"
+                                   delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        
+        NSLog(@"%@",error.localizedDescription);
+    }
+    
+    
+    [self setTitle:nombreUsuario];
+    [self.collectionView reloadData];
+    
+}
+
+- (IBAction)unwindToSelectedUser:(UIStoryboardSegue *)segue{
+    UsuariosTableViewController *vc = (UsuariosTableViewController*)segue.sourceViewController;
+
+    [self updateList:vc.usuarioSeleccionado.nombreUsuario];
+
+}
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Assuming you've hooked this all up in a Storyboard with a popover presentation style
+    if ([segue.identifier isEqualToString:@"showPopover"]) {
+        UINavigationController *destNav = segue.destinationViewController;
+        
+        // This is the important part
+        UIPopoverPresentationController *popPC = destNav.popoverPresentationController;
+        popPC.delegate = self;
+    }
+}
 
 @end
