@@ -11,6 +11,8 @@
 #import "UsuariosCollectionViewCell.h"
 #import "UsuariosTableViewController.h"
 #import "HeaderViewCollectionReusableView.h"
+#include <stdlib.h>
+
 
 @interface ConsultarListaUsuarioCollectionViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
@@ -32,7 +34,8 @@ static NSString * const reuseIdentifier = @"Cell";
     
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 0, 15);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 14, 15);
+    
 
 
     //[self setTitle:_categoria.nombreCategoria];
@@ -98,7 +101,7 @@ static NSString * const reuseIdentifier = @"Cell";
         NSString *nombreCategoria =categoria.category.nombreCategoria;
 
         headerView.sectionTitle.text = nombreCategoria;
-        headerView.sectionTitle.textColor = [UIColor whiteColor ];
+        headerView.sectionTitle.textColor = [UIColor blackColor];
         headerView.sectionTitle.textAlignment = NSTextAlignmentLeft;
         headerView.sectionTitle.adjustsFontSizeToFitWidth = YES;
         UIImage *headerImage = [UIImage imageNamed:@"header_cocina.png"];
@@ -134,6 +137,9 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
     cell.imageView.image = [UIImage imageNamed:currentProducto.nombreImagen];
+    int r = rand() % 100;
+    cell.labelPorcentaje.text = [NSString stringWithFormat:@"%d%%",r ];
+    cell.labelPorcentaje.adjustsFontSizeToFitWidth = YES;
     
     CGRect screenRect = cell.imageView.bounds;
     
