@@ -77,13 +77,21 @@ static NSString * const reuseIdentifier = @"Cell";
 {
     NSLog(@"%@",[_imagesArray objectAtIndex:indexPath.row]);
     _nombreImagen = [_imagesArray objectAtIndex:indexPath.row];
-    
+    ImageCollectionViewCell *imageCell = (ImageCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    imageCell.imageView.alpha = .50;
     SEL setImage = @selector(setNombreImagen:);
     
     [[self parentViewController] performSelector:setImage withObject:_nombreImagen afterDelay:0];
     /*ImageCollectionViewCell *cell = (ImageCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
     cell.layer.borderWidth = 1.0f;
     cell.layer.borderColor = [[UIColor blueColor] CGColor];*/
+
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"des");
+    ImageCollectionViewCell *imageCell = (ImageCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    imageCell.imageView.alpha = 1;
 
 }
 

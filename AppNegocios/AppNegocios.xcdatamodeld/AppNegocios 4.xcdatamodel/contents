@@ -28,8 +28,8 @@
     </entity>
     <elements>
         <element name="Categoria" positionX="241" positionY="-171" width="128" height="103"/>
+        <element name="FechasProducto" positionX="16" positionY="216" width="128" height="88"/>
         <element name="Producto" positionX="25" positionY="-34" width="128" height="133"/>
         <element name="Usuario" positionX="-171" positionY="-207" width="128" height="118"/>
-        <element name="FechasProducto" positionX="16" positionY="216" width="128" height="88"/>
     </elements>
 </model>

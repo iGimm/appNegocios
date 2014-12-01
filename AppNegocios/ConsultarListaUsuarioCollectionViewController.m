@@ -121,6 +121,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UsuariosCollectionViewCell *usuarioListaCell = (UsuariosCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    usuarioListaCell.labelPorcentaje.text = @"100%";
+}
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UsuariosCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
@@ -140,6 +144,7 @@ static NSString * const reuseIdentifier = @"Cell";
     int r = rand() % 100;
     cell.labelPorcentaje.text = [NSString stringWithFormat:@"%d%%",r ];
     cell.labelPorcentaje.adjustsFontSizeToFitWidth = YES;
+    cell.labelPorcentaje.textAlignment = NSTextAlignmentRight;
     
     CGRect screenRect = cell.imageView.bounds;
     
@@ -162,7 +167,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(120, 120);
+    return CGSizeMake(135, 135);
 }
 
 
@@ -285,6 +290,8 @@ static NSString * const reuseIdentifier = @"Cell";
     [self updateList:vc.usuarioSeleccionado.nombreUsuario];
 
 }
+
+
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
