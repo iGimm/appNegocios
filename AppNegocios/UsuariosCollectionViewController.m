@@ -35,7 +35,9 @@ static NSString * const reuseIdentifier = @"Cell";
     [super viewDidLoad];
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(5.0f, 3.0f, 5.0f, 3.0f);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 0, 15);
+    
+    //UIEdgeInsetsMake(<#CGFloat top#>, <#CGFloat left#>, <#CGFloat bottom#>, <#CGFloat right#>)
     
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
@@ -112,12 +114,13 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     // Configure the cell
-    cell.layer.borderWidth = 1.0f;
-    cell.layer.borderColor = [[UIColor blueColor] CGColor];
-    cell.labelNombreSeccion.textColor = [UIColor blueColor];
+    /*cell.layer.borderWidth = 1.0f;
+    cell.layer.borderColor = [[UIColor blueColor] CGColor];*/
+    cell.labelNombreSeccion.textColor = [UIColor whiteColor];
     cell.labelNombreSeccion.text =  currentUsuario.nombreUsuario;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
-    cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
+    cell.labelNombreSeccion.textAlignment = NSTextAlignmentLeft;
+    cell.imageView.image = [UIImage imageNamed:currentUsuario.nombreImagen];
     
     return cell;
 }
@@ -219,6 +222,8 @@ static NSString * const reuseIdentifier = @"Cell";
         
         [newUsuario setNombreUsuario:cvc.tfNombreUsuario.text];
         [newUsuario setEdadUsuario:cvc.tfEdadUsuario.text];
+        [newUsuario setNombreImagen:cvc.nombreImagen];
+        
     }
     
 }
@@ -237,6 +242,11 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 #pragma mark <UICollectionViewDelegate>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return CGSizeMake(135, 135);
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

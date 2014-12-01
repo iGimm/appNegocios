@@ -12,6 +12,6 @@
 #import "Categoria.h"
 #import "Producto.h"
 
-@interface ConsultarListaUsuarioCollectionViewController : UICollectionViewController <NSFetchedResultsControllerDelegate>
+@interface ConsultarListaUsuarioCollectionViewController : UICollectionViewController <NSFetchedResultsControllerDelegate,UIPopoverPresentationControllerDelegate>
 
 @end

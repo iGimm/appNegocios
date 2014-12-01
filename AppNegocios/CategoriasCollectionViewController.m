@@ -28,7 +28,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [self setTitle:_usuario.nombreUsuario];
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(5.0f, 3.0f, 5.0f, 3.0f);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 0, 15);
 
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
     
@@ -90,12 +90,14 @@ static NSString * const reuseIdentifier = @"Cell";
     // Configure the cell
     
     // Configure the cell
-    cell.layer.borderWidth = 1.0f;
-    cell.layer.borderColor = [[UIColor whiteColor] CGColor];
+    /*cell.layer.borderWidth = 1.0f;
+    cell.layer.borderColor = [[UIColor whiteColor] CGColor];*/
     cell.labelNombreSeccion.textColor = [UIColor whiteColor];
     cell.labelNombreSeccion.text =  currentCategory.nombreCategoria;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
-    cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
+    cell.labelNombreSeccion.textAlignment = NSTextAlignmentLeft;
+    cell.imageView.image = [UIImage imageNamed:currentCategory.nombreImagen];
+
     
     return cell;
 }
@@ -186,6 +188,7 @@ static NSString * const reuseIdentifier = @"Cell";
     
     [_usuario setCategories:actvc.categories];
     
+    
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -212,6 +215,11 @@ static NSString * const reuseIdentifier = @"Cell";
 
 
 #pragma mark <UICollectionViewDelegate>
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return CGSizeMake(135, 135);
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking

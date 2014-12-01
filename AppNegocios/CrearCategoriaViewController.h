@@ -10,5 +10,6 @@
 
 @interface CrearCategoriaViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *tfNombreCategoria;
+@property  (strong, nonatomic) NSString *nombreImagen;
 
 @end

@@ -11,5 +11,6 @@
 @interface CreateUserViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *tfNombreUsuario;
 @property (weak, nonatomic) IBOutlet UITextField *tfEdadUsuario;
-
+@property  (strong, nonatomic) NSString *nombreImagen;
 @end
+

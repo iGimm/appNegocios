@@ -17,7 +17,6 @@
 @interface UsuariosTableViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
 @property (nonatomic,strong)NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic,strong) Usuario *usuarioSeleccionado;
 @end
 
 @implementation UsuariosTableViewController
@@ -151,7 +150,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     Usuario *usrSeleccionado = [_fetchedResultsController objectAtIndexPath:indexPath];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
+    usuarioSeleccionado = usrSeleccionado;
+    [self performSegueWithIdentifier:@"unwindToListUser" sender:self];
+
 
     
 }
@@ -190,6 +193,8 @@
         
         [newUsuario setNombreUsuario:cvc.tfNombreUsuario.text];
         [newUsuario setEdadUsuario:cvc.tfEdadUsuario.text];
+        [newUsuario setNombreImagen:cvc.nombreImagen];
+        
     }
 
 }

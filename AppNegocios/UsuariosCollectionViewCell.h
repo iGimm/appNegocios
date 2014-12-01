@@ -11,5 +11,7 @@
 @interface UsuariosCollectionViewCell : UICollectionViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *labelNombreSeccion;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UILabel *labelPorcentaje;
 
 @end

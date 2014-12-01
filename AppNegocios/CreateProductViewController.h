@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfNombreProducto;
 @property (weak, nonatomic) IBOutlet UILabel *labelNombreCategoria;
 @property (strong,nonatomic) Categoria* categoria;
+@property  (strong, nonatomic) NSString *nombreImagen;
 
 @end

@@ -9,7 +9,10 @@
 #import "ConsultarListaUsuarioCollectionViewController.h"
 #import "AppDelegate.h"
 #import "UsuariosCollectionViewCell.h"
+#import "UsuariosTableViewController.h"
 #import "HeaderViewCollectionReusableView.h"
+#include <stdlib.h>
+
 
 @interface ConsultarListaUsuarioCollectionViewController ()
 @property (nonatomic, strong) NSManagedObjectContext * managedObjectContext;
@@ -31,7 +34,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     
     UICollectionViewFlowLayout *collectionViewLayout = (UICollectionViewFlowLayout*)self.collectionView.collectionViewLayout;
-    collectionViewLayout.sectionInset = UIEdgeInsetsMake(20.0f, 0, 20.0f, 0);
+    collectionViewLayout.sectionInset = UIEdgeInsetsMake(14, 15, 14, 15);
+    
+
 
     //[self setTitle:_categoria.nombreCategoria];
     _managedObjectContext = [(AppDelegate*)[[UIApplication sharedApplication] delegate] managedObjectContext];
@@ -41,11 +46,12 @@ static NSString * const reuseIdentifier = @"Cell";
     //Load items
     
     NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", @"pedro" ];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", @"Pedro" ];
     
     [busqueda setEntity:entityDescription];
     [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
     [busqueda setPredicate:predicate];
+    
     
     
     _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:busqueda managedObjectContext:_managedObjectContext sectionNameKeyPath:@"category.nombreCategoria" cacheName:nil];
@@ -95,10 +101,10 @@ static NSString * const reuseIdentifier = @"Cell";
         NSString *nombreCategoria =categoria.category.nombreCategoria;
 
         headerView.sectionTitle.text = nombreCategoria;
-        headerView.sectionTitle.textColor = [UIColor whiteColor ];
+        headerView.sectionTitle.textColor = [UIColor blackColor];
         headerView.sectionTitle.textAlignment = NSTextAlignmentLeft;
         headerView.sectionTitle.adjustsFontSizeToFitWidth = YES;
-        UIImage *headerImage = [UIImage imageNamed:@"header_banner.png"];
+        UIImage *headerImage = [UIImage imageNamed:@"header_cocina.png"];
         headerView.imageView.image = headerImage;
         
         reusableview = headerView;
@@ -111,6 +117,13 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     
     return reusableview;
+}
+
+
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    UsuariosCollectionViewCell *usuarioListaCell = (UsuariosCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    usuarioListaCell.labelPorcentaje.text = @"100%";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -127,6 +140,26 @@ static NSString * const reuseIdentifier = @"Cell";
     cell.labelNombreSeccion.text =  currentProducto.nombreProducto;
     cell.labelNombreSeccion.adjustsFontSizeToFitWidth = YES;
     cell.labelNombreSeccion.textAlignment = NSTextAlignmentRight;
+    cell.imageView.image = [UIImage imageNamed:currentProducto.nombreImagen];
+    int r = rand() % 100;
+    cell.labelPorcentaje.text = [NSString stringWithFormat:@"%d%%",r ];
+    cell.labelPorcentaje.adjustsFontSizeToFitWidth = YES;
+    cell.labelPorcentaje.textAlignment = NSTextAlignmentRight;
+    
+    CGRect screenRect = cell.imageView.bounds;
+    
+    //Multiplicarlo por un factor para obtener el restante
+    //screenRect.origin.y += screenRect.size.height/2;
+    //screenRect.size.height = screenRect.size.height/2;
+    
+    
+    //create a new view with the same size
+    UIView* coverView = [[UIView alloc] initWithFrame:screenRect];
+    // change the background color to black and the opacity to 0.6
+    coverView.backgroundColor = [[UIColor blackColor] colorWithAlphaComponent:0.2];
+    // add this new view to your main view
+    [cell.imageView addSubview:coverView];
+    
     
     return cell;
 }
@@ -134,7 +167,7 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(100, 100);
+    return CGSizeMake(135, 135);
 }
 
 
@@ -215,5 +248,61 @@ static NSString * const reuseIdentifier = @"Cell";
     }];
 }
 
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller {
+    return UIModalPresentationNone;
+}
+
+
+-(void)updateList:(NSString *)nombreUsuario{
+    
+    NSEntityDescription *entityDescription = [NSEntityDescription entityForName:@"Producto" inManagedObjectContext:_managedObjectContext];
+    NSError *error =nil;
+    //Load items
+    
+    NSFetchRequest * busqueda = [[NSFetchRequest alloc] init];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"( ANY users.nombreUsuario == %@)", nombreUsuario ];
+    
+    [busqueda setEntity:entityDescription];
+    [busqueda setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"nombreProducto" ascending:YES]]];
+    [busqueda setPredicate:predicate];
+    
+    
+    
+    _fetchedResultsController = [[NSFetchedResultsController alloc] initWithFetchRequest:busqueda managedObjectContext:_managedObjectContext sectionNameKeyPath:@"category.nombreCategoria" cacheName:nil];
+    
+    if(![_fetchedResultsController performFetch:&error]){
+        [[[UIAlertView alloc] initWithTitle:@"Error"
+                                    message:@"Hubo un error al hacer la búsqueda"
+                                   delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil] show];
+        
+        NSLog(@"%@",error.localizedDescription);
+    }
+    
+    
+    [self setTitle:nombreUsuario];
+    [self.collectionView reloadData];
+    
+}
+
+- (IBAction)unwindToSelectedUser:(UIStoryboardSegue *)segue{
+    UsuariosTableViewController *vc = (UsuariosTableViewController*)segue.sourceViewController;
+
+    [self updateList:vc.usuarioSeleccionado.nombreUsuario];
+
+}
+
+
+
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Assuming you've hooked this all up in a Storyboard with a popover presentation style
+    if ([segue.identifier isEqualToString:@"showPopover"]) {
+        UINavigationController *destNav = segue.destinationViewController;
+        
+        // This is the important part
+        UIPopoverPresentationController *popPC = destNav.popoverPresentationController;
+        popPC.delegate = self;
+    }
+}
 
 @end

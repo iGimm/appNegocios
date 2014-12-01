@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
-
+@class Usuario;
 @interface UsuariosTableViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+@property (nonatomic,strong) Usuario *usuarioSeleccionado;
 
 @end
